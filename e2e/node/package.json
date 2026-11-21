@@ -1,0 +1,9 @@
+{
+  "name": "booklist",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": { "booklist": "src/cli.js" },
+  "scripts": { "test": "node --test test/" },
+  "engines": { "node": ">=20" }
+}

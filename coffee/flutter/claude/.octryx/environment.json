@@ -1,0 +1,10 @@
+{
+  "test": "flutter test",
+  "system_test": "python3 system_test/run_system_test.py",
+  "setup": ["flutter pub get", "python3 -m venv .venv", ".venv/bin/python -m pip install --quiet playwright"],
+  "check": ["flutter --version", ".venv/bin/python -c \"import playwright.sync_api\""],
+  "lint": "dart format --output=none --set-exit-if-changed . && flutter analyze && dart run tool/check_lines.dart",
+  "path": [".venv/bin"],
+  "browser": "chrome",
+  "serve": {"command": "flutter build web --release && python3 -m http.server 8090 --bind 127.0.0.1 --directory build/web", "url": "http://127.0.0.1:8090/", "ready_seconds": 600}
+}

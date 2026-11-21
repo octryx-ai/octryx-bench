@@ -1,0 +1,15 @@
+{
+  "test": "node --test tests/unit/*.test.mjs",
+  "system_test": ".venv/bin/python -m unittest discover -s tests/system -v",
+  "setup": [
+    "test -d .venv || python3 -m venv .venv",
+    ".venv/bin/pip install playwright"
+  ],
+  "check": [
+    ".venv/bin/python -c \"import playwright\"",
+    "node --version"
+  ],
+  "lint": [],
+  "path": [".venv/bin"],
+  "browser": "chromium"
+}

@@ -1,0 +1,24 @@
+{
+  "title": "OE-72: grind setting starts at 15 for a new espresso with grinder M1",
+  "fresh_profile": true,
+  "seed": {},
+  "viewport": {"width": 390, "height": 844},
+  "steps": [
+    {"do": "goto", "url": "/"},
+    {"do": "expect_text", "text": "Equipment"},
+    {"do": "click", "text": "Equipment"},
+    {"do": "click", "text": "Add grinder"},
+    {"do": "fill", "label": "Name", "value": "M1"},
+    {"do": "fill", "label": "Scale minimum", "value": "1"},
+    {"do": "fill", "label": "Scale maximum", "value": "30"},
+    {"do": "fill", "label": "Scale step", "value": "0.5"},
+    {"do": "fill", "label": "Dead space", "value": "2.5"},
+    {"do": "click", "text": "Save"},
+    {"do": "expect_text", "text": "M1"},
+    {"do": "click", "text": "Brew"},
+    {"do": "click", "text": "Log a brew"},
+    {"do": "expect_text", "text": "Grind setting"},
+    {"do": "screenshot", "name": "brew-form-grind-default"},
+    {"do": "expect_text", "text": "15.0"}
+  ]
+}

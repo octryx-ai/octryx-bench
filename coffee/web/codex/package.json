@@ -1,0 +1,14 @@
+{
+  "name": "kaffeejournal",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "vite --host 127.0.0.1",
+    "lint": "node --check src/app.js && node --check src/storage.js && node --check src/schema.js && node --check src/domain.js && node --check src/configuration.js && node --check src/inventory-domain.js && node --check src/inventory.js && node --check src/brew-domain.js && node --check src/brew-storage.js && node --check src/brewing.js && node --check src/maintenance-domain.js && node --check src/maintenance-storage.js && node --check src/maintenance.js && node --check src/guidance-domain.js && node --check src/guidance-storage.js && node --check src/guidance.js && node --check server/research.mjs && node --check vite.config.js"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.58.2",
+    "fake-indexeddb": "6.2.4",
+    "vite": "7.3.1"
+  }
+}

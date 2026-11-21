@@ -1,0 +1,48 @@
+/* Pflege, Wasser, Heute rows, Einstellungen sections. */
+.stack { display: grid; gap: var(--space-4); }
+.stack--tight { gap: var(--space-2); }
+.btn-row { display: flex; gap: var(--space-3); flex-wrap: wrap; align-items: center; }
+
+/* care tasks */
+.task-list { list-style: none; display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fill, minmax(var(--size-card-min), 1fr)); align-items: start; }
+.task { display: flex; flex-direction: column; gap: var(--space-3); }
+.task__head { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--space-3); }
+.task__name { font-size: var(--fs-16); overflow-wrap: anywhere; }
+.task__device { color: var(--text-muted); font-size: var(--fs-14); }
+.task__text { font-variant-numeric: var(--numeric); font-size: var(--fs-14); color: var(--text-muted); }
+.task__text strong { color: var(--text); font-size: var(--fs-16); }
+.task.is-overdue { border-color: var(--error); }
+.progress { height: var(--space-2); border-radius: var(--radius-pill); background: var(--neutral-chip-bg); overflow: hidden; }
+.progress__fill { height: 100%; width: calc(var(--pct, 0) * 1%); background: var(--accent); border-radius: var(--radius-pill); }
+.is-overdue .progress__fill { background: var(--error); }
+
+/* water */
+.water-card { display: flex; flex-direction: column; gap: var(--space-3); }
+.water-card__head { display: flex; align-items: center; justify-content: space-between; gap: var(--space-2); }
+.water-card__name { overflow-wrap: anywhere; }
+.water-values { display: grid; gap: var(--space-2); }
+.water-value { display: grid; grid-template-columns: 1fr auto; gap: var(--space-1) var(--space-3); align-items: center; padding-top: var(--space-2); border-top: var(--border-width) solid var(--border); }
+.water-value:first-child { border-top: 0; padding-top: 0; }
+.water-value__label { font-size: var(--fs-14); color: var(--text-muted); }
+.water-value__num { font-weight: var(--fw-bold); font-variant-numeric: var(--numeric); }
+.water-value__main { display: flex; flex-direction: column; min-width: 0; }
+.water-value__note { grid-column: 1 / -1; font-size: var(--fs-12); color: var(--text-muted); }
+.water-range { font-size: var(--fs-12); color: var(--text-muted); }
+.dialog .field__hint.water-range { font-size: var(--fs-14); }
+
+/* today rows */
+.today { display: grid; gap: var(--space-5); }
+.today__row { display: grid; gap: var(--space-3); }
+.today__row h2 { font-size: var(--fs-20); }
+.chip-row { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+a.chip, .chip--link { min-height: var(--size-touch); padding: var(--space-1) var(--space-4); text-decoration: none; }
+.chip--lg { font-size: var(--fs-14); }
+
+/* settings */
+.settings-page { display: grid; gap: var(--space-5); max-width: var(--size-detail-max); }
+.field-grid--settings { display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fill, minmax(var(--size-field-min), 1fr)); align-items: start; }
+.settings-actions { display: flex; justify-content: flex-end; }
+.import-error { display: flex; align-items: center; gap: var(--space-2); color: var(--error); }
+.import-error[hidden] { display: none; }
+.hidden-input { position: absolute; width: var(--border-width); height: var(--border-width); opacity: 0; pointer-events: none; }
+.item-card__chips .chip { white-space: normal; max-width: 100%; }
