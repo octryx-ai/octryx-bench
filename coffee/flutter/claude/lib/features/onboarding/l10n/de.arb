@@ -1,0 +1,50 @@
+{
+  "@@locale": "de",
+  "onboardingWelcomeTitle": "Willkommen",
+  "onboardingWelcomeText": "Halte fest, wie dein Kaffee gelingt.",
+  "onboardingSkip": "Überspringen",
+  "onboardingNext": "Weiter",
+  "onboardingProgress": "{k} von {total}",
+  "@onboardingProgress": {
+    "placeholders": {
+      "k": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "onboardingProgressSemantics": "Schritt {k} von {total}",
+  "@onboardingProgressSemantics": {
+    "placeholders": {
+      "k": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "onboardingSaveFailed": "Einstellung konnte nicht gespeichert werden",
+  "onboardingRetry": "Erneut versuchen",
+  "onboardingFeaturesTitle": "Das kann die App",
+  "onboardingFeatureLog": "Brühungen erfassen",
+  "onboardingFeatureTrack": "Bohnen und Ruhezeit führen",
+  "onboardingFeatureTips": "Empfehlung zur Verbesserung",
+  "onboardingBack": "Zurück",
+  "onboardingGrinderTitle": "Deine Mühle",
+  "onboardingGrinderText": "Lege deine Mühle mit Skala und Totraum an.",
+  "onboardingLater": "Später",
+  "onboardingGrinderCreated": "Angelegt: {name}",
+  "onboardingFinishTitle": "Alles bereit",
+  "onboardingFinishText": "Die Einrichtung ist fertig. Heute zeigt, was als Nächstes ansteht.",
+  "onboardingLetsGo": "Los geht’s",
+  "@onboardingGrinderCreated": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  }
+}

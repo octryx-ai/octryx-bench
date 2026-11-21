@@ -1,0 +1,50 @@
+{
+  "@@locale": "en",
+  "onboardingWelcomeTitle": "Welcome",
+  "onboardingWelcomeText": "Keep track of how your coffee turns out.",
+  "onboardingSkip": "Skip",
+  "onboardingNext": "Next",
+  "onboardingProgress": "{k} of {total}",
+  "@onboardingProgress": {
+    "placeholders": {
+      "k": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "onboardingProgressSemantics": "Step {k} of {total}",
+  "@onboardingProgressSemantics": {
+    "placeholders": {
+      "k": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "onboardingSaveFailed": "Setting could not be saved",
+  "onboardingRetry": "Retry",
+  "onboardingFeaturesTitle": "What the app does",
+  "onboardingFeatureLog": "Log brews",
+  "onboardingFeatureTrack": "Track beans and resting time",
+  "onboardingFeatureTips": "Get tips to improve",
+  "onboardingBack": "Back",
+  "onboardingGrinderTitle": "Your grinder",
+  "onboardingGrinderText": "Add your grinder with scale and dead space.",
+  "onboardingLater": "Later",
+  "onboardingGrinderCreated": "Created: {name}",
+  "onboardingFinishTitle": "All set",
+  "onboardingFinishText": "Your setup is done. Today shows what to do next.",
+  "onboardingLetsGo": "Let's go",
+  "@onboardingGrinderCreated": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  }
+}

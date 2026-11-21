@@ -1,0 +1,221 @@
+/*
+ * Warm Crema design tokens. The ONLY file with colour and size literals.
+ *
+ * Breakpoints (media queries cannot use var(), the values are repeated there):
+ *   phone   < 600px
+ *   tablet  600px - 1023px   (72px icon rail)
+ *   desktop >= 1024px        (240px side bar)
+ *
+ * Theme: <html data-theme="light|dark|system">. "system" (or no attribute)
+ * follows prefers-color-scheme through the media query at the end of this file.
+ */
+
+:root {
+  /* ---- colour: light (default) ---- */
+  color-scheme: light;
+  --bg: #FBF5EC;
+  --surface: #FFFFFF;
+  --surface-sunken: #F4EADB;
+  --text: #2B1D14;
+  --text-muted: #6B5646;
+  --accent: #8A4B1F;
+  --accent-hover: #7F451C;
+  --accent-pressed: #6F3C18;
+  --accent-tint: #F1E3D6;
+  --on-accent: #FFFFFF;
+  --ok: #2F7D4F;
+  --warn: #A35F00;
+  --error: #B3261E;
+  --on-status: #FFFFFF;
+  --ok-tint: #E3F1E8;
+  --warn-tint: #F8EAD0;
+  --error-tint: #F8E1DF;
+  --border: #E3D5C3;
+  --border-strong: #8C7767;
+  --neutral-chip-bg: #EFE4D4;
+  --skeleton-base: #EFE4D4;
+  --skeleton-shine: #F9F1E6;
+  --scrim: rgba(43, 29, 20, 0.45);
+  --focus-bg: #EADDCB;
+  --focus-ring-color: #1A5FB4;
+  --on-gradient: #2B1D14;
+  --anchor-s: 45%;
+  --anchor-l1: 78%;
+  --anchor-l2: 58%;
+  --anchor-hue-shift: 25;
+  --anchor-tint: color-mix(in srgb, var(--accent) 12%, transparent);
+
+  /* ---- elevation ---- */
+  --shadow: 0 2px 8px rgba(43, 29, 20, 0.12);
+  --shadow-hover: 0 6px 18px rgba(43, 29, 20, 0.18);
+  --shadow-raised: 0 8px 24px rgba(43, 29, 20, 0.22);
+  --card-border: 1px solid transparent;
+  --card-border-selected: 2px solid var(--accent);
+
+  /* ---- typography ---- */
+  --font-heading: "Fraunces", Georgia, serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --fs-12: 12px;
+  --fs-14: 14px;
+  --fs-16: 16px;
+  --fs-20: 20px;
+  --fs-24: 24px;
+  --fs-32: 32px;
+  --fs-64: 64px;
+  --lh-tight: 1.2;
+  --lh-body: 1.5;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+  --numeric: tabular-nums;
+
+  /* ---- spacing ---- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+
+  /* ---- radius ---- */
+  --radius-control: 8px;
+  --radius-card: 16px;
+  --radius-pill: 999px;
+
+  /* ---- sizes ---- */
+  --size-sidebar: 240px;
+  --size-rail: 72px;
+  --size-touch: 44px;
+  --size-content-max: 1100px;
+  --size-tabbar: 64px;
+  --size-fab: 56px;
+  --size-icon: 24px;
+  --size-icon-sm: 16px;
+  --size-icon-lg: 48px;
+  --size-illustration: 96px;
+  --size-logo: 32px;
+  --size-input-min: 120px;
+  --size-card-min: 280px;
+  --size-anchor: 96px;
+  --size-menu-min: 200px;
+  --size-toast-max: 420px;
+  --size-sheet-max: 480px;
+  --size-swatch: 56px;
+  --size-spinner: 20px;
+  --size-stepper-input: 128px;
+  --size-skeleton-line: 16px;
+  --size-timer-font: 64px;
+  --size-bar: 4px;
+  --focus-number-size: 25vh;
+  --focus-number-font: min(20vh, 26vw);
+  --focus-button-min: 72px;
+  --focus-unit-size: 0.4em;
+  --size-field-min: 240px;
+  --size-preview: 360px;
+  --size-detail-max: 720px;
+  --focus-ring-width: 2px;
+  --focus-ring: 2px solid var(--focus-ring-color);
+  --focus-offset: 2px;
+  --border-width: 1px;
+  --border-width-thick: 2px;
+  --stroke: 2px;
+  --pulse-spread: 12px;
+  --bp-tablet: 600px;
+  --bp-desktop: 1024px;
+  --tooltip-offset: 8px;
+
+  /* ---- motion ---- */
+  --dur-fast: 120ms;
+  --dur: 200ms;
+  --dur-slow: 1200ms;
+  --toast-duration: 4000;
+
+  /* ---- layers ---- */
+  --z-nav: 20;
+  --z-fab: 30;
+  --z-sheet: 40;
+  --z-toast: 50;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #1E1713;
+  --surface: #2A211B;
+  --surface-sunken: #241C17;
+  --text: #F3E9DC;
+  --text-muted: #BFAE9E;
+  --accent: #E0A06A;
+  --accent-hover: #CE935F;
+  --accent-pressed: #BB8555;
+  --accent-tint: #3A2B20;
+  --on-accent: #1E1713;
+  --ok: #6CC48E;
+  --warn: #F2B24D;
+  --error: #FF8A80;
+  --on-status: #1E1713;
+  --ok-tint: #213127;
+  --warn-tint: #38290F;
+  --error-tint: #3B2220;
+  --border: #4A3C31;
+  --border-strong: #9C8878;
+  --neutral-chip-bg: #3A2F27;
+  --skeleton-base: #3A2F27;
+  --skeleton-shine: #4A3C31;
+  --scrim: rgba(0, 0, 0, 0.6);
+  --focus-bg: #130E0B;
+  --focus-ring-color: #8AB4F8;
+  --on-gradient: #FFFFFF;
+  --anchor-l1: 38%;
+  --anchor-l2: 28%;
+  --shadow: none;
+  --shadow-hover: none;
+  --shadow-raised: none;
+  --card-border: 1px solid var(--border);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]):not([data-theme="dark"]) {
+    color-scheme: dark;
+    --bg: #1E1713;
+    --surface: #2A211B;
+    --surface-sunken: #241C17;
+    --text: #F3E9DC;
+    --text-muted: #BFAE9E;
+    --accent: #E0A06A;
+    --accent-hover: #CE935F;
+    --accent-pressed: #BB8555;
+    --accent-tint: #3A2B20;
+    --on-accent: #1E1713;
+    --ok: #6CC48E;
+    --warn: #F2B24D;
+    --error: #FF8A80;
+    --on-status: #1E1713;
+    --ok-tint: #213127;
+    --warn-tint: #38290F;
+    --error-tint: #3B2220;
+    --border: #4A3C31;
+    --border-strong: #9C8878;
+    --neutral-chip-bg: #3A2F27;
+    --skeleton-base: #3A2F27;
+    --skeleton-shine: #4A3C31;
+    --scrim: rgba(0, 0, 0, 0.6);
+    --focus-bg: #130E0B;
+    --focus-ring-color: #8AB4F8;
+    --on-gradient: #FFFFFF;
+  --anchor-l1: 38%;
+  --anchor-l2: 28%;
+    --shadow: none;
+    --shadow-hover: none;
+    --shadow-raised: none;
+    --card-border: 1px solid var(--border);
+  }
+}
+
+/* Bean/bag card anchor: gradient from hue --h (unitless, set from JS) to --h + shift. hsl() lives only here. */
+.bean-anchor {
+  background: linear-gradient(135deg,
+    hsl(var(--h) var(--anchor-s) var(--anchor-l1)),
+    hsl(calc(var(--h) + var(--anchor-hue-shift)) var(--anchor-s) var(--anchor-l2)));
+  color: var(--on-gradient);
+}
