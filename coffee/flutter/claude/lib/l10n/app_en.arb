@@ -1,0 +1,837 @@
+{
+  "@@locale": "en",
+  "appTitle": "Coffee Companion",
+  "today": "Today",
+  "beans": "Beans",
+  "brew": "Brew",
+  "equipment": "Equipment",
+  "more": "More",
+  "water": "Water",
+  "care": "Care",
+  "settings": "Settings",
+  "save": "Save",
+  "cancel": "Cancel",
+  "ready": "Ready",
+  "restingDays": "{n, plural, =1{Resting, 1 day left} other{Resting, {n} days left}}",
+  "@restingDays": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "tooOld": "Too old",
+  "comingSoon": "Coming soon",
+  "comingSoonBody": "This part of the app arrives in a later release.",
+  "retry": "Try again",
+  "noImage": "No image",
+  "defaultWithoutSource": "Default without source",
+  "sourceLabel": "Source: {source} (retrieved {date})",
+  "@sourceLabel": {
+    "placeholders": {
+      "source": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "bannerInfo": "Info",
+  "bannerWarning": "Warning",
+  "bannerError": "Error",
+  "styleGuide": "Style guide",
+  "navigation": "Navigation",
+  "add": "Add",
+  "back": "Back",
+  "startFilter": "Start filter",
+  "grinders": "Grinders",
+  "machines": "Machines",
+  "beanDetail": "Bean detail",
+  "beanForm": "Add bean",
+  "brewForm": "Log a brew",
+  "brewDetail": "Brew detail",
+  "filterGuided": "Guided filter",
+  "grinderForm": "Add grinder",
+  "machineForm": "Add machine",
+  "waterForm": "Add water profile",
+  "openBeanDetail": "Open a bean",
+  "openBrewDetail": "Open a brew",
+  "emptyTitle": "Nothing here yet",
+  "emptyBody": "Add your first bean.",
+  "addBean": "Add bean",
+  "loading": "Loading",
+  "errorBody": "Something went wrong.",
+  "stateDefault": "Default",
+  "stateHover": "Hover",
+  "statePressed": "Pressed",
+  "stateFocus": "Focus",
+  "stateDisabled": "Disabled",
+  "stateLoading": "Loading",
+  "stateSelected": "Selected",
+  "stateEmpty": "Empty",
+  "stateError": "Error",
+  "sgIntro": "Every component in every state, in the current theme.",
+  "sgColors": "Colours",
+  "sgButtons": "Buttons",
+  "sgCards": "Cards",
+  "sgFields": "Fields",
+  "sgChips": "Chips",
+  "sgBanners": "Banners",
+  "sgOther": "Other",
+  "fieldLabel": "Label",
+  "fieldHint": "Value",
+  "fieldUnit": "g",
+  "fieldErrorText": "Enter a value between 1 and 100",
+  "bannerInfoText": "Your beans are resting.",
+  "bannerWarningText": "Order beans soon.",
+  "bannerErrorText": "Could not save the brew.",
+  "warningCareAction": "Open care",
+  "warningWaterAction": "Open water profile",
+  "bannerAction": "Show",
+  "cardTitle": "Card title",
+  "cardBody": "Card content in paper look.",
+  "ruleDemoKey": "Rule demo",
+  "aboutSources": "About and sources",
+  "fieldName": "Name",
+  "edit": "Edit",
+  "deleteNamed": "Delete {name}",
+  "@deleteNamed": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "enterNumber": "Enter a number",
+  "rangeError": "Enter a value between {min} and {max}",
+  "@rangeError": {
+    "placeholders": {
+      "min": {
+        "type": "String"
+      },
+      "max": {
+        "type": "String"
+      }
+    }
+  },
+  "nameRequired": "Enter a name",
+  "tooLong": "Use at most {n} characters",
+  "@tooLong": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "unitG": "g",
+  "unitS": "s",
+  "unitCelsius": "°C",
+  "unitPpm": "ppm",
+  "unitMgL": "mg/L",
+  "unitFh": "°fH",
+  "unitDh": "°dH",
+  "gramsValue": "{value} g",
+  "@gramsValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "secondsValue": "{value} s",
+  "@secondsValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "celsiusValue": "{value} °C",
+  "@celsiusValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "daysCount": "{n, plural, =1{1 day} other{{n} days}}",
+  "@daysCount": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "grinderAdd": "Add grinder",
+  "grinderEditTitle": "Edit grinder",
+  "grindersEmptyTitle": "No grinder yet",
+  "grindersEmptyBody": "Add your grinder with scale and dead space.",
+  "scaleMin": "Scale minimum",
+  "scaleMax": "Scale maximum",
+  "scaleStep": "Scale step",
+  "stepPositive": "Step must be greater than 0",
+  "scaleMaxAboveMin": "Maximum must be greater than the minimum",
+  "finerDirection": "Finer grind direction",
+  "finerDown": "Down (lower is finer)",
+  "finerUp": "Up (higher is finer)",
+  "deadSpace": "Dead space",
+  "checkGrindSetting": "Check grind setting",
+  "grindSettingNotOnScale": "Value is not on the grinder's scale (step {step})",
+  "@grindSettingNotOnScale": {
+    "placeholders": {
+      "step": {
+        "type": "String"
+      }
+    }
+  },
+  "machineAdd": "Add machine",
+  "machineEditTitle": "Edit machine",
+  "machinesEmptyTitle": "No machine yet",
+  "machinesEmptyBody": "Add your machine with its settings.",
+  "brewTemp": "Brew temperature",
+  "preinfusion": "Pre-infusion",
+  "pressureProfile": "Pressure profile",
+  "defaultWater": "Default water profile",
+  "noDefaultWater": "None",
+  "waterAdd": "Add water profile",
+  "waterEditTitle": "Edit water profile",
+  "waterDetail": "Water profile",
+  "waterEmptyTitle": "No water profile yet",
+  "waterEmptyBody": "Enter your water's hardness.",
+  "waterInScaRange": "In SCA range",
+  "waterOutsideSca": "Outside SCA",
+  "waterCheckFirst": "Check water first: {parameter} {value}, SCA {range}",
+  "@waterCheckFirst": {
+    "placeholders": {
+      "parameter": {
+        "type": "String"
+      },
+      "value": {
+        "type": "String"
+      },
+      "range": {
+        "type": "String"
+      }
+    }
+  },
+  "measuredOf": "{n} of {total} measured",
+  "@measuredOf": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "notMeasured": "not measured",
+  "scaRange": "SCA {range}",
+  "@scaRange": {
+    "placeholders": {
+      "range": {
+        "type": "String"
+      }
+    }
+  },
+  "paramTds": "TDS",
+  "paramHardness": "Hardness",
+  "paramAlkalinity": "Alkalinity",
+  "paramPh": "pH",
+  "paramSodium": "Sodium",
+  "paramChlorine": "Chlorine",
+  "hardnessUnitLabel": "Hardness unit",
+  "hardnessRequired": "Hardness (required)",
+  "exportData": "Export",
+  "importData": "Import",
+  "beansEmptyTitle": "No beans yet",
+  "noPack": "No pack",
+  "beanEditTitle": "Edit bean",
+  "packForm": "Add pack",
+  "packEditTitle": "Edit pack",
+  "fieldRoaster": "Roaster",
+  "fieldRoastLevel": "Roast level",
+  "fieldKind": "Kind",
+  "fieldLeadTime": "Lead time",
+  "fieldMinStock": "Minimum stock (optional)",
+  "fieldRoastDate": "Roast date",
+  "fieldWeight": "Weight",
+  "firstPack": "First pack",
+  "unitDays": "days",
+  "roastLight": "Light",
+  "roastMedium": "Medium",
+  "roastMediumDark": "Medium dark",
+  "roastDark": "Dark",
+  "kindEspressoBlend": "Espresso blend",
+  "kindFilter": "Filter",
+  "kindAllround": "All-round",
+  "dateRequired": "Enter a date",
+  "dateInvalid": "Use a date like {example}",
+  "@dateInvalid": {
+    "placeholders": {
+      "example": {
+        "type": "String"
+      }
+    }
+  },
+  "dateFuture": "The date must not be in the future",
+  "pickDate": "Pick a date",
+  "roastedOn": "Roasted {date}",
+  "@roastedOn": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "packSizes": "{remaining} of {size}",
+  "@packSizes": {
+    "placeholders": {
+      "remaining": {
+        "type": "String"
+      },
+      "size": {
+        "type": "String"
+      }
+    }
+  },
+  "openPack": "Open",
+  "openedOn": "Opened on {date}",
+  "@openedOn": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "tileRemaining": "Remaining",
+  "tileReadyDate": "Ready date",
+  "packsTitle": "Packs",
+  "noPacksYet": "No packs yet.",
+  "beanNotFound": "Bean not found",
+  "editPack": "Edit pack",
+  "deletePackNamed": "Delete pack roasted {date}",
+  "@deletePackNamed": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "kindAndRoast": "{kind}, {roast}",
+  "@kindAndRoast": {
+    "placeholders": {
+      "kind": {
+        "type": "String"
+      },
+      "roast": {
+        "type": "String"
+      }
+    }
+  },
+  "beanImageLabel": "Image of {name}",
+  "@beanImageLabel": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "brewsEmptyTitle": "No brews yet",
+  "brewsEmptyBody": "Log your first shot.",
+  "methodEspresso": "Espresso",
+  "methodV60": "V60",
+  "methodChemex": "Chemex",
+  "methodKalita": "Kalita",
+  "methodAeropress": "AeroPress",
+  "methodBatch": "Batch",
+  "tasteSour": "Sour",
+  "tasteBitter": "Bitter",
+  "tasteWeak": "Weak",
+  "tasteBalanced": "Balanced",
+  "brewMethod": "Method",
+  "brewMachine": "Machine",
+  "brewGrinder": "Grinder",
+  "brewPack": "Pack",
+  "brewGrind": "Grind setting",
+  "brewDose": "Dose",
+  "brewPurge": "Purge amount",
+  "brewYield": "Yield",
+  "brewShotTime": "Shot time (s)",
+  "brewTime": "Shot time",
+  "brewRatio": "Ratio",
+  "brewWater": "Water profile",
+  "brewTaste": "Taste",
+  "brewRating": "Rating",
+  "brewNote": "Note",
+  "brewStarted": "Started",
+  "grindLower": "Lower grind setting",
+  "grindRaise": "Raise grind setting",
+  "timerStart": "Start timer",
+  "timerStop": "Stop timer",
+  "timerElapsed": "Elapsed {time}",
+  "@timerElapsed": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "ratingStars": "{n, plural, =1{1 star} other{{n} stars}}",
+  "@ratingStars": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "purgeBeanChange": "Grind and discard {grams} first (bean change)",
+  "@purgeBeanChange": {
+    "placeholders": {
+      "grams": {
+        "type": "String"
+      }
+    }
+  },
+  "purgeIdle": "Grind and discard {grams} first (grinder idle)",
+  "@purgeIdle": {
+    "placeholders": {
+      "grams": {
+        "type": "String"
+      }
+    }
+  },
+  "needGrinder": "Add a grinder first",
+  "needMachine": "Add a machine first",
+  "needPack": "Add a pack first",
+  "notEnoughBeans": "Not enough beans in the pack ({n} g left)",
+  "@notEnoughBeans": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "brewPackOption": "{bean}, roasted {date}, {grams} left",
+  "@brewPackOption": {
+    "placeholders": {
+      "bean": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      },
+      "grams": {
+        "type": "String"
+      }
+    }
+  },
+  "brewSelectionMissing": "Choose machine, grinder and pack",
+  "brewNotFound": "Brew not found",
+  "recTitle": "Recommendation",
+  "recReasonTitle": "Reason",
+  "recSourceTitle": "Source",
+  "recGrind": "Set grind to {setting}",
+  "@recGrind": {
+    "placeholders": {
+      "setting": {
+        "type": "String"
+      }
+    }
+  },
+  "recNoChange": "No change",
+  "recScaleEnd": "Grind stays at {setting}",
+  "@recScaleEnd": {
+    "placeholders": {
+      "setting": {
+        "type": "String"
+      }
+    }
+  },
+  "recScaleEndHint": "End of scale",
+  "recRest": "{n, plural, =1{Let the pack rest (1 day left)} other{Let the pack rest ({n} days left)}}",
+  "@recRest": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "recNoWater": "Enter water values",
+  "reasonNoWater": "No water profile is set, so the water cannot be checked.",
+  "reasonWaterOutside": "Water outside the SCA range comes before any other change.",
+  "reasonPackResting": "The pack has not finished resting for espresso yet.",
+  "reasonTimeTooShort": "Shot time {time} s is below the target window: grind finer by {steps, plural, =1{1 step} other{{steps} steps}}.",
+  "@reasonTimeTooShort": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      },
+      "steps": {
+        "type": "int"
+      }
+    }
+  },
+  "reasonTimeTooLong": "Shot time {time} s is above the target window: grind coarser by {steps, plural, =1{1 step} other{{steps} steps}}.",
+  "@reasonTimeTooLong": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      },
+      "steps": {
+        "type": "int"
+      }
+    }
+  },
+  "reasonTasteSour": "Sour taste in the target window: grind finer by {steps, plural, =1{1 step} other{{steps} steps}}.",
+  "@reasonTasteSour": {
+    "placeholders": {
+      "steps": {
+        "type": "int"
+      }
+    }
+  },
+  "reasonTasteWeak": "Weak taste in the target window: grind finer by {steps, plural, =1{1 step} other{{steps} steps}}.",
+  "@reasonTasteWeak": {
+    "placeholders": {
+      "steps": {
+        "type": "int"
+      }
+    }
+  },
+  "reasonTasteBitter": "Bitter taste in the target window: grind coarser by {steps, plural, =1{1 step} other{{steps} steps}}.",
+  "@reasonTasteBitter": {
+    "placeholders": {
+      "steps": {
+        "type": "int"
+      }
+    }
+  },
+  "reasonBalanced": "Balanced and inside the target window: keep everything.",
+  "reasonScaleEnd": "The grinder is at the end of its scale; no further change is possible.",
+  "nextTry": "Next try",
+  "filterMethodNote": "V60 scheme",
+  "filterNoPack": "No pack is ready yet",
+  "filterPackBackup": "{pack} (backup)",
+  "@filterPackBackup": {
+    "placeholders": {
+      "pack": {
+        "type": "String"
+      }
+    }
+  },
+  "filterRatio": "Ratio",
+  "filterWaterTotal": "Total water: {n} g",
+  "@filterWaterTotal": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "filterStart": "Start",
+  "filterNext": "Next",
+  "filterPourTo": "Pour to {n} g",
+  "@filterPourTo": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "filterAtTime": "at {time}",
+  "@filterAtTime": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "filterStepBloom": "Bloom",
+  "filterStepPour": "Pour {n}",
+  "@filterStepPour": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "filterFinishTitle": "Drawdown",
+  "filterDrawdownField": "Drawdown time (s)",
+  "filterTimerLabel": "Timer {time}",
+  "@filterTimerLabel": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "brewDrawdown": "Drawdown time",
+  "brewWaterTotal": "Total water",
+  "brewBloom": "Bloom",
+  "brewPours": "Pours",
+  "reasonPackRestingFilter": "The pack has not finished resting for filter yet.",
+  "reasonDrawdownTooShort": "Drawdown {time} s is below the target window: grind finer by {steps, plural, =1{1 step} other{{steps} steps}}.",
+  "@reasonDrawdownTooShort": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      },
+      "steps": {
+        "type": "int"
+      }
+    }
+  },
+  "reasonDrawdownTooLong": "Drawdown {time} s is above the target window: grind coarser by {steps, plural, =1{1 step} other{{steps} steps}}.",
+  "@reasonDrawdownTooLong": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      },
+      "steps": {
+        "type": "int"
+      }
+    }
+  },
+  "stockOrderNow": "Order now",
+  "stockDaysLeft": "{days} days left",
+  "@stockDaysLeft": {
+    "placeholders": {
+      "days": {
+        "type": "String"
+      }
+    }
+  },
+  "stockDaysValue": "{days} days",
+  "@stockDaysValue": {
+    "placeholders": {
+      "days": {
+        "type": "String"
+      }
+    }
+  },
+  "stockBarLabel": "Stock {stock} of order point {point}",
+  "@stockBarLabel": {
+    "placeholders": {
+      "stock": {
+        "type": "String"
+      },
+      "point": {
+        "type": "String"
+      }
+    }
+  },
+  "tileReach": "Days of cover",
+  "tileMinStock": "Minimum stock",
+  "gapBanner": "No ready coffee from {from} to {to}",
+  "@gapBanner": {
+    "placeholders": {
+      "from": {
+        "type": "String"
+      },
+      "to": {
+        "type": "String"
+      }
+    }
+  },
+  "gapOpenPack": "Open pack {x}",
+  "@gapOpenPack": {
+    "placeholders": {
+      "x": {
+        "type": "String"
+      }
+    }
+  },
+  "todayReadyNow": "Ready now",
+  "todayReadyNone": "Nothing is ready to drink right now.",
+  "todayNoPackTitle": "No pack yet",
+  "todayNoPackHint": "Add a pack",
+  "todayLastBrew": "Last brew",
+  "todayLastNone": "No brews yet.",
+  "todayNewBrew": "New brew",
+  "todayBeanOrderDetail": "{bean} · {days} days left",
+  "@todayBeanOrderDetail": {
+    "placeholders": {
+      "bean": {
+        "type": "String"
+      },
+      "days": {
+        "type": "String"
+      }
+    }
+  },
+  "warningWater": "Water profile {name} outside SCA",
+  "@warningWater": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "warningCareDue": "{task} due",
+  "@warningCareDue": {
+    "placeholders": {
+      "task": {
+        "type": "String"
+      }
+    }
+  },
+  "careTaskTitle": "{kind} {name}",
+  "@careTaskTitle": {
+    "placeholders": {
+      "kind": {
+        "type": "String"
+      },
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "careBackflush": "Backflush",
+  "careDescale": "Descale",
+  "careGrinderClean": "Grinder cleaning",
+  "careDue": "Due",
+  "careInDays": "{n, plural, =1{In 1 day} other{In {n} days}}",
+  "@careInDays": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "careBackflushDue": "Backflush: Due",
+  "careShotsSince": "Shots since last time: {n}",
+  "@careShotsSince": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "careLastDone": "Last done: {date}",
+  "@careLastDone": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "careNeverDone": "Never done",
+  "careManualHint": "The machine manual takes precedence.",
+  "careDone": "Done",
+  "careEmptyTitle": "Nothing to maintain",
+  "careEmptyBody": "Add a machine first.",
+  "careTileNone": "Nothing due",
+  "careTileDue": "{n, plural, =1{1 task due} other{{n} tasks due}}",
+  "@careTileDue": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "exportButton": "Export data",
+  "exportHelp": "Saves all your data as one JSON file. Data only leaves this device through the export.",
+  "exportShared": "Export shared: {file}",
+  "@exportShared": {
+    "placeholders": {
+      "file": {
+        "type": "String"
+      }
+    }
+  },
+  "exportDownloaded": "Downloaded {file}",
+  "@exportDownloaded": {
+    "placeholders": {
+      "file": {
+        "type": "String"
+      }
+    }
+  },
+  "exportReadyTitle": "Export ready",
+  "exportCopiedBody": "The JSON was copied to the clipboard. Save it as {file}.",
+  "@exportCopiedBody": {
+    "placeholders": {
+      "file": {
+        "type": "String"
+      }
+    }
+  },
+  "close": "Close",
+  "importButton": "Import data",
+  "importHelp": "Reads a JSON file exported by this app. Newer records win.",
+  "importPasteButton": "Paste JSON",
+  "importJsonLabel": "JSON",
+  "importConfirm": "Import",
+  "importResultImported": "{n} records imported",
+  "@importResultImported": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "importResultSkipped": "{n} records skipped",
+  "@importResultSkipped": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "importUnsupported": "File version not supported",
+  "importInvalid": "Invalid file",
+  "deleteAllButton": "Delete all data",
+  "deleteAllTitle": "Delete all data?",
+  "deleteAllBody": "Beans, packs, brews, equipment and water profiles are removed from this device. Export first to keep them.",
+  "deleteAllConfirm": "Delete",
+  "deleteAllDone": "All data deleted",
+  "sourcesTitle": "Sources",
+  "sourcesGroupRest": "Resting times",
+  "sourcesLoadError": "Sources could not be loaded.",
+  "onboardingWelcomeTitle": "Welcome",
+  "onboardingWelcomeText": "Keep track of how your coffee turns out.",
+  "onboardingSkip": "Skip",
+  "onboardingNext": "Next",
+  "onboardingProgress": "{k} of {total}",
+  "@onboardingProgress": {
+    "placeholders": {
+      "k": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "onboardingProgressSemantics": "Step {k} of {total}",
+  "@onboardingProgressSemantics": {
+    "placeholders": {
+      "k": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "onboardingSaveFailed": "Setting could not be saved",
+  "onboardingRetry": "Retry",
+  "onboardingFeaturesTitle": "What the app does",
+  "onboardingFeatureLog": "Log brews",
+  "onboardingFeatureTrack": "Track beans and resting time",
+  "onboardingFeatureTips": "Get tips to improve",
+  "onboardingBack": "Back",
+  "onboardingGrinderTitle": "Your grinder",
+  "onboardingGrinderText": "Add your grinder with scale and dead space.",
+  "onboardingLater": "Later",
+  "onboardingGrinderCreated": "Created: {name}",
+  "onboardingFinishTitle": "All set",
+  "onboardingBeanText": "Add your first bean. Its pack can follow later.",
+  "onboardingBeanRoasterRequired": "Enter a roaster",
+  "onboardingBeanCreated": "Created: {name}",
+  "@onboardingBeanCreated": {"placeholders": {"name": {"type": "String"}}},
+  "onboardingLetsGo": "Let's go",
+  "@onboardingGrinderCreated": {"placeholders": {"name": {"type": "String"}}}
+}

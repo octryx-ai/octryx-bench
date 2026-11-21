@@ -1,0 +1,24 @@
+{
+  "title": "OE-73: a saved grinder is still listed after reloading the page",
+  "fresh_profile": true,
+  "seed": null,
+  "viewport": {"width": 1280, "height": 800},
+  "steps": [
+    {"do": "goto", "url": "/"},
+    {"do": "click", "label": "Equipment"},
+    {"do": "expect_text", "text": "No grinder yet"},
+    {"do": "click", "label": "Add grinder"},
+    {"do": "fill", "label": "Name", "value": "M1"},
+    {"do": "fill", "label": "Scale minimum", "value": "1"},
+    {"do": "fill", "label": "Scale maximum", "value": "30"},
+    {"do": "fill", "label": "Scale step", "value": "1"},
+    {"do": "fill", "label": "Dead space", "value": "2.5"},
+    {"do": "click", "label": "Save"},
+    {"do": "expect_text", "text": "M1"},
+    {"do": "reload"},
+    {"do": "click", "label": "Equipment"},
+    {"do": "screenshot", "name": "equipment-after-reload"},
+    {"do": "expect_no_text", "text": "No grinder yet"},
+    {"do": "expect_text", "text": "M1"}
+  ]
+}
