@@ -1,0 +1,145 @@
+<mxfile host="app" version="1.0">
+  <diagram name="data-flow" id="data-flow">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" page="1"
+                  pageWidth="1400" pageHeight="900">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="1"/>
+        <mxCell
+          id="d1"
+          value="shared_preferences&lt;br&gt;onboardingDone"
+          style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#E6EEF7;strokeColor=#3A5F8A;"
+          vertex="1"
+          parent="1">
+          <mxGeometry x="40" y="60" width="240" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell
+          id="d2"
+          value="SharedPreferencesFlagStore&lt;br&gt;read / write"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E9DC;strokeColor=#7F4527;"
+          vertex="1"
+          parent="1">
+          <mxGeometry x="340" y="60" width="240" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell
+          id="d3"
+          value="OnboardingGate&lt;br&gt;isDone: read error = true"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E9DC;strokeColor=#7F4527;"
+          vertex="1"
+          parent="1">
+          <mxGeometry x="640" y="60" width="260" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell
+          id="d4"
+          value="KaffeeApp&lt;br&gt;initialRoute"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E9DC;strokeColor=#7F4527;"
+          vertex="1"
+          parent="1">
+          <mxGeometry x="640" y="200" width="260" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell
+          id="d5"
+          value="OnboardingScreen&lt;br&gt;Überspringen / Los geht's"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E9DC;strokeColor=#7F4527;"
+          vertex="1"
+          parent="1">
+          <mxGeometry x="340" y="340" width="260" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell
+          id="d6"
+          value="OnboardingGate.markDone&lt;br&gt;write true, only on success"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E9DC;strokeColor=#7F4527;"
+          vertex="1"
+          parent="1">
+          <mxGeometry x="640" y="340" width="260" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell
+          id="d7"
+          value="OnboardingGrinderPage&lt;br&gt;form values"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E9DC;strokeColor=#7F4527;"
+          vertex="1"
+          parent="1">
+          <mxGeometry x="40" y="460" width="240" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell
+          id="d8"
+          value="AppData.addGrinder&lt;br&gt;in memory"
+          style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#E6EEF7;strokeColor=#3A5F8A;"
+          vertex="1"
+          parent="1">
+          <mxGeometry x="340" y="460" width="240" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell
+          id="g1"
+          value="read"
+          style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;html=1;"
+          edge="1"
+          parent="1"
+          source="d1"
+          target="d2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell
+          id="g2"
+          value="flag or null"
+          style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;html=1;"
+          edge="1"
+          parent="1"
+          source="d2"
+          target="d3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell
+          id="g3"
+          value="done?"
+          style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;html=1;"
+          edge="1"
+          parent="1"
+          source="d3"
+          target="d4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell
+          id="g4"
+          value="skip / finish"
+          style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;html=1;"
+          edge="1"
+          parent="1"
+          source="d5"
+          target="d6">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell
+          id="g5"
+          value="write"
+          style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;html=1;"
+          edge="1"
+          parent="1"
+          source="d6"
+          target="d2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell
+          id="g6"
+          value="stored"
+          style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;html=1;"
+          edge="1"
+          parent="1"
+          source="d2"
+          target="d1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell
+          id="g7"
+          value="addGrinder"
+          style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;html=1;"
+          edge="1"
+          parent="1"
+          source="d7"
+          target="d8">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
