@@ -1,0 +1,26 @@
+:root{--page:#f6f0e7;--sidebar:#ebe2d5;--panel:#fffdf8;--text:#2b211b;--muted:#68594c;--border:#887565;--primary:#854523;--on-primary:#ffffff;--success:#315e45;--warning:#795315;--error:#a12f32;--focus:#175e91;--scrim:#241a1280;--a:#ead5bd;--b:#c59770;--c:#dbdfce;--d:#a6b794;--e:#e8d4cd;--f:#c39485;--s0:0;--s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--target:44px;--anchor:96px;--drawing:80px;--empty:64px;--card:288px;--nav:76px;--side:240px;--max:1200px;--line:1px;--focus-width:3px;--radius:8px;--card-radius:16px;--round:50%;--font:system-ui,sans-serif;--serif:Georgia,serif;--mono:ui-monospace,monospace;--small:12px;--body:16px;--label:14px;--sub:20px;--title:40px;--heading:28px;--timer:64px;--normal:400;--medium:600;--bold:700;--leading:1.5;--full:100%;--viewport:100dvh;--columns:3;--grow:1;--none:none;--angle:135deg;--shadow:0 4px 20px #241a1214;--zero:0;--half:50%;--layer:10;--dialog:600px;--phone:639px;--desktop:1024px}
+:root[data-theme=dark]{--page:#181512;--sidebar:#211c18;--panel:#29221d;--text:#f5ebdd;--muted:#c4b4a4;--border:#9b8878;--primary:#edaa7b;--on-primary:#24180f;--success:#a0d0af;--warning:#e8c17b;--error:#ffa7a7;--focus:#8bcbff;--a:#453426;--b:#71523a;--c:#303a2d;--d:#506047;--e:#44302c;--f:#715044}
+@media(prefers-color-scheme:dark){:root[data-theme=system]{--page:#181512;--sidebar:#211c18;--panel:#29221d;--text:#f5ebdd;--muted:#c4b4a4;--border:#9b8878;--primary:#edaa7b;--on-primary:#24180f;--success:#a0d0af;--warning:#e8c17b;--error:#ffa7a7;--focus:#8bcbff;--a:#453426;--b:#71523a;--c:#303a2d;--d:#506047;--e:#44302c;--f:#715044}}
+
+.drawing-bag path{d:path("M20 12h40l5 12v44H15V24z M20 12l5 12h40 M15 30h50 M28 40h24v20H28z M40 44c-9 0-9 12 0 12s9-12 0-12 M40 44c-5 5 5 7 0 12")}
+.drawing-machine path{d:path("M12 15h56v39H12z M20 24h40 M30 32v9h20v-9 M22 46h12v11H22z M46 46h12v11H46z M9 64h62")}
+.drawing-filter path{d:path("M17 12h46L45 40H35z M33 40h14l12 27H21z M27 53h26")}
+.drawing-grinder path{d:path("M22 10h36l-6 22H28z M28 32h24v27H28z M20 67h40 M36 58h14v10H36 M40 37a8 8 0 1 0 0 16a8 8 0 1 0 0-16 M34 43h12 M34 47h12")}
+.drawing-gear path{d:path("M40 16v12 M40 52v12 M16 40h12 M52 40h12 M23 23l9 9 M48 48l9 9 M23 57l9-9 M48 32l9-9 M40 29a11 11 0 1 0 0 22a11 11 0 1 0 0-22")}
+.drawing-water path{d:path("M40 10C30 28 18 38 18 50a22 22 0 0 0 44 0C62 38 50 28 40 10z M27 50q0 14 13 14")}
+.drawing-brush path{d:path("M25 14h30v35H25z M20 49h40v18H20z M30 51v16 M40 51v16 M50 51v16")}
+.drawing-cup path{d:path("M15 25h43v28q0 14-21 14T15 53z M58 30h8q15 12-8 19 M12 72h50 M26 10v8 M40 8v10")}
+:root{--fr:1fr}
+@media(max-width:1023px){.grid{--columns:2}.main{padding:var(--s5)}}
+@media(max-width:639px){.sidebar{display:none}.main{margin-left:var(--zero);padding:var(--s5) var(--s4) calc(var(--nav) + var(--s6))}.phone-title{display:block;padding:var(--s4);background:var(--sidebar)}.bottom{display:flex;position:fixed;bottom:var(--zero);left:var(--zero);right:var(--zero);min-height:var(--nav);background:var(--sidebar);border-top:var(--line) solid var(--border);justify-content:space-around;z-index:var(--layer)}.bottom a,.bottom button{flex:var(--grow);padding:var(--s2);border:var(--zero);background:var(--sidebar);color:var(--text);flex-direction:column}.grid{--columns:1}.hero{grid-template-columns:var(--fr)}h1{font-size:var(--heading)}.skip{left:var(--zero)}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+:root{--initials-position:translate(40px,62px);--dash:2 3}
+.initials{transform:var(--initials-position);text-anchor:middle}
+.drawing-grinder-conical path{d:path('M22 10h36l-6 22H28z M28 32h24v27H28z M20 67h40 M36 58h14v10H36 M40 37a8 8 0 1 0 0 16a8 8 0 1 0 0-16 M40 39l-6 11h12z')}
+.drawing-grinder-unknown path{d:path('M22 10h36l-6 22H28z M28 32h24v27H28z M20 67h40 M36 58h14v10H36 M40 37a8 8 0 1 0 0 16a8 8 0 1 0 0-16');stroke-dasharray:var(--dash)}
+:root{--equipment:48px}
+
+:root{--viewbox:0 0 80 80}
+:root{color-scheme:light}
+:root[data-theme=dark]{color-scheme:dark}
+@media(prefers-color-scheme:dark){:root[data-theme=system]{color-scheme:dark}}

@@ -1,0 +1,14 @@
+{"version":1,"rules":[
+  {"key":"tds.min","value":75,"source":"https://seelaz.com/blogs/barista-academy/water-for-coffee-sca","retrieved":"2026-11-16"},
+  {"key":"tds.max","value":250,"source":"https://seelaz.com/blogs/barista-academy/water-for-coffee-sca","retrieved":"2026-11-16"},
+  {"key":"tds.target","value":150,"source":"https://seelaz.com/blogs/barista-academy/water-for-coffee-sca","retrieved":"2026-11-16"},
+  {"key":"hardness.min","value":50,"source":"https://seelaz.com/blogs/barista-academy/water-for-coffee-sca","retrieved":"2026-11-16"},
+  {"key":"hardness.max","value":175,"source":"https://seelaz.com/blogs/barista-academy/water-for-coffee-sca","retrieved":"2026-11-16"},
+  {"key":"alkalinity.min","value":40,"source":"https://seelaz.com/blogs/barista-academy/water-for-coffee-sca","retrieved":"2026-11-16"},
+  {"key":"alkalinity.max","value":75,"source":"https://seelaz.com/blogs/barista-academy/water-for-coffee-sca","retrieved":"2026-11-16"},
+  {"key":"alkalinity.target","value":40,"source":"https://seelaz.com/blogs/barista-academy/water-for-coffee-sca","retrieved":"2026-11-16"},
+  {"key":"ph.min","value":6.5,"source":"https://seelaz.com/blogs/barista-academy/water-for-coffee-sca","retrieved":"2026-11-16"},
+  {"key":"ph.max","value":7.5,"source":"https://seelaz.com/blogs/barista-academy/water-for-coffee-sca","retrieved":"2026-11-16"},
+  {"key":"sodium.max","value":10,"source":"https://seelaz.com/blogs/barista-academy/water-for-coffee-sca","retrieved":"2026-11-16"},
+  {"key":"chlorine.max","value":0,"source":"https://seelaz.com/blogs/barista-academy/water-for-coffee-sca","retrieved":"2026-11-16"}
+]}

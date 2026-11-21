@@ -1,0 +1,37 @@
+.page-header {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: var(--space-4); flex-wrap: wrap;
+  margin-bottom: var(--space-5);
+}
+.page-lead { color: var(--text-muted); margin-bottom: var(--space-5); }
+
+.notice { display: flex; flex-direction: column; align-items: center; text-align: center; gap: var(--space-3); padding: var(--space-7) var(--space-4); }
+.notice .icon { width: var(--size-illustration); height: var(--size-illustration); color: var(--text-muted); }
+.notice__text { color: var(--text-muted); max-width: var(--size-sheet-max); }
+
+.settings-form { display: grid; gap: var(--space-4); max-width: var(--size-sheet-max); }
+.settings-row { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); }
+.settings-row__value { font-weight: var(--fw-bold); font-variant-numeric: var(--numeric); }
+
+/* style guide */
+.sg { display: grid; gap: var(--space-6); }
+.sg__section { display: grid; gap: var(--space-4); }
+.sg__grid { display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fill, minmax(var(--size-card-min), 1fr)); align-items: start; }
+.sg__cell { display: flex; flex-direction: column; gap: var(--space-2); align-items: flex-start; min-width: 0; }
+.sg__state { font-size: var(--fs-12); font-weight: var(--fw-medium); color: var(--text-muted); text-transform: uppercase; letter-spacing: var(--border-width); }
+.sg__row { display: flex; gap: var(--space-3); flex-wrap: wrap; align-items: center; }
+.sg__hint { font-size: var(--fs-14); color: var(--text-muted); }
+.sg__cell > .card, .sg__cell > .reco, .sg__cell > .field, .sg__cell > .toast { width: 100%; }
+.swatches { display: grid; gap: var(--space-3); grid-template-columns: repeat(auto-fill, minmax(var(--size-input-min), 1fr)); }
+.swatch { display: flex; flex-direction: column; gap: var(--space-1); font-size: var(--fs-12); color: var(--text-muted); }
+.swatch__color { height: var(--size-swatch); border-radius: var(--radius-control); border: var(--border-width) solid var(--border); }
+.swatch__color--bg { background: var(--bg); }
+.swatch__color--surface { background: var(--surface); }
+.swatch__color--text { background: var(--text); }
+.swatch__color--muted { background: var(--text-muted); }
+.swatch__color--accent { background: var(--accent); }
+.swatch__color--ok { background: var(--ok); }
+.swatch__color--warn { background: var(--warn); }
+.swatch__color--error { background: var(--error); }
+
+.link-touch { display: inline-flex; align-items: center; min-height: var(--size-touch); }
