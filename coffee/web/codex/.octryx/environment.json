@@ -1,0 +1,31 @@
+{
+  "test": "node --test tests/unit/*.test.mjs",
+  "system_test": "PLAYWRIGHT_BROWSERS_PATH=./.cache/ms-playwright ./node_modules/.bin/playwright test",
+  "setup": [
+    "npm_config_cache=./.cache/npm npm ci",
+    "python scripts/install_browser.py"
+  ],
+  "check": [
+    "test -f package-lock.json",
+    "test -x node_modules/.bin/playwright",
+    "test -f .cache/ms-playwright/chromium-1208/INSTALLATION_COMPLETE",
+    "test -f src/domain.js",
+    "test -f src/configuration.js",
+    "test -f src/inventory-domain.js",
+    "test -f src/inventory.js",
+    "test -f src/brew-domain.js",
+    "test -f src/brew-storage.js",
+    "test -f src/brewing.js",
+    "test -f src/maintenance-domain.js",
+    "test -f src/maintenance-storage.js",
+    "test -f src/maintenance.js",
+    "test -f src/guidance.js",
+    "test -f server/research.mjs",
+    "test -f vite.config.js"
+  ],
+  "lint": "npm run lint",
+  "path": [
+    "node_modules/.bin"
+  ],
+  "browser": "chromium"
+}
