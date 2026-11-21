@@ -1,0 +1,1712 @@
+{
+  "format": "octryx.spec-studio/v1",
+  "target": "flutter",
+  "title": "Kaffee-Begleiter · Flutter · OE-80",
+  "design": {
+    "proposed": "roastery",
+    "directions": [
+      {
+        "id": "roastery",
+        "name": "Warme Rösterei",
+        "hint": "approved",
+        "light": {
+          "bg": "#FBF6EF",
+          "surface": "#F0E6D8",
+          "text": "#2A1E17",
+          "muted": "#6B584B",
+          "accent": "#8A4B2A",
+          "ok": "#36703F",
+          "warn": "#8A5A00",
+          "error": "#B3261E"
+        },
+        "dark": {
+          "bg": "#1F1814",
+          "surface": "#2B211B",
+          "text": "#F3E9DD",
+          "muted": "#C5B4A6",
+          "accent": "#DFA77D",
+          "ok": "#7CC28E",
+          "warn": "#E0B050",
+          "error": "#F2B8B5"
+        },
+        "fonts": {
+          "head": "Fraunces",
+          "body": "Inter",
+          "mono": "JetBrains Mono"
+        },
+        "radius": 16
+      }
+    ]
+  },
+  "nav": [
+    {
+      "id": "today",
+      "label": "Heute",
+      "icon": "home",
+      "phone": true
+    },
+    {
+      "id": "beans",
+      "label": "Bohnen",
+      "icon": "coffee",
+      "phone": true
+    },
+    {
+      "id": "brews",
+      "label": "Brühen",
+      "icon": "timer",
+      "phone": true
+    },
+    {
+      "id": "equipment",
+      "label": "Ausrüstung",
+      "icon": "settings",
+      "phone": true
+    },
+    {
+      "id": "more",
+      "label": "Mehr",
+      "icon": "menu",
+      "phone": true
+    },
+    {
+      "id": "water",
+      "label": "Wasser",
+      "icon": "water",
+      "phone": false
+    },
+    {
+      "id": "care",
+      "label": "Pflege",
+      "icon": "clean",
+      "phone": false
+    },
+    {
+      "id": "settings",
+      "label": "Einstellungen",
+      "icon": "settings",
+      "phone": false
+    }
+  ],
+  "screens": [
+    {
+      "id": "today",
+      "name": "Heute / Today",
+      "route": "/",
+      "nav": "today",
+      "focus": false,
+      "filled": [
+        {
+          "type": "banner",
+          "text": "Kein trinkbereiter Kaffee vom 21.11.2026 bis 24.11.2026",
+          "tone": "warn",
+          "action": "Jetzt bestellen"
+        },
+        {
+          "type": "item",
+          "title": "Sierra · Rösterei am See",
+          "meta": "250 g · bereit",
+          "art": "Bohnenverlauf"
+        },
+        {
+          "type": "text",
+          "text": "Letzte Brühung: 17 g → 34 g · 27 s"
+        },
+        {
+          "type": "button",
+          "text": "Neue Brühung",
+          "variant": "primary",
+          "go": "brew-new"
+        }
+      ],
+      "empty": [
+        {
+          "type": "empty",
+          "icon": "coffee",
+          "title": "Noch nichts da",
+          "text": "Lege deine erste Bohne an.",
+          "action": "Bohne hinzufügen"
+        }
+      ],
+      "empty_not_applicable": "",
+      "next_step": "brew-new",
+      "note": "Warnungen vor bereiten Bohnen und letzter Brühung. Banner öffnen Detail/Pflege. Tagesweise berechnete Lücken. EN Nothing here yet / Add bean."
+    },
+    {
+      "id": "beans",
+      "name": "Bohnen / Beans",
+      "route": "/beans",
+      "nav": "beans",
+      "focus": false,
+      "filled": [
+        {
+          "type": "item",
+          "title": "Sierra · Rösterei am See",
+          "meta": "250 g · Röstung 01.11.2026",
+          "badge": "Bereit",
+          "art": "Kupferverlauf"
+        },
+        {
+          "type": "item",
+          "title": "Morgenrot · Röster Nord",
+          "meta": "500 g · bereit ab 25.11.2026",
+          "badge": "Ruht noch 9 Tage",
+          "art": "Goldverlauf"
+        },
+        {
+          "type": "button",
+          "text": "Bohne hinzufügen",
+          "variant": "primary",
+          "go": "bean-new"
+        }
+      ],
+      "empty": [
+        {
+          "type": "empty",
+          "icon": "coffee",
+          "title": "Noch keine Bohnen",
+          "text": "Lege deine erste Bohne an.",
+          "action": "Bohne hinzufügen"
+        }
+      ],
+      "empty_not_applicable": "",
+      "next_step": "bean-detail",
+      "note": "Bereitschaftsgruppe vor Datum: bereit,ruhend,nur alt,leer. Nur qualifizierende Packs bestimmen Datum; danach Name klein,createdAt,id. Karten öffnen Detail. EN No beans yet / Add bean."
+    },
+    {
+      "id": "bean-detail",
+      "name": "Bohnendetail / Bean details",
+      "route": "/beans/:id",
+      "nav": "beans",
+      "focus": false,
+      "filled": [
+        {
+          "type": "kpis",
+          "items": [
+            {
+              "text": "{'label': 'Rest', 'value': '250 g'}",
+              "label": "Rest",
+              "value": "250 g",
+              "tone": ""
+            },
+            {
+              "text": "{'label': 'Reichweite', 'value': '13.9 Tage'}",
+              "label": "Reichweite",
+              "value": "13.9 Tage",
+              "tone": ""
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "title": "Packung · 01.11.2026",
+          "meta": "250 g · ungeöffnet"
+        },
+        {
+          "type": "button",
+          "text": "Öffnen",
+          "variant": "secondary",
+          "go": "bean-detail"
+        },
+        {
+          "type": "button",
+          "text": "Packung hinzufügen",
+          "variant": "primary",
+          "go": "pack-new"
+        }
+      ],
+      "empty": [
+        {
+          "type": "empty",
+          "icon": "coffee",
+          "title": "Keine Packungen",
+          "text": "Erfasse eine Packung.",
+          "action": "Packung hinzufügen"
+        }
+      ],
+      "empty_not_applicable": "",
+      "next_step": "pack-new",
+      "note": "Öffnen setzt openedAt UTC-RFC3339 mit ms und updatedAt. Editierbar oder rücknehmbar zu null,kein Bestands-/Historieneffekt. Stock-Bar bei orderPoint0 ohne Division/Markierung. EN No packs / Add pack / Undo opening."
+    },
+    {
+      "id": "bean-new",
+      "name": "Bohne erfassen / Add bean",
+      "route": "/beans/new",
+      "nav": "beans",
+      "focus": false,
+      "filled": [
+        {
+          "type": "field",
+          "label": "Name",
+          "value": "Sierra"
+        },
+        {
+          "type": "field",
+          "label": "Röster",
+          "value": "Rösterei am See"
+        },
+        {
+          "type": "field",
+          "label": "Röstgrad",
+          "value": "Mittel"
+        },
+        {
+          "type": "field",
+          "label": "Art",
+          "value": "Allround"
+        },
+        {
+          "type": "field",
+          "label": "Lieferzeit",
+          "value": "3",
+          "suffix": "Tage"
+        },
+        {
+          "type": "field",
+          "label": "Mindestbestand",
+          "suffix": "g"
+        },
+        {
+          "type": "button",
+          "text": "Speichern",
+          "variant": "primary",
+          "go": "bean-detail"
+        }
+      ],
+      "empty": [
+        {
+          "type": "field",
+          "label": "Name"
+        },
+        {
+          "type": "text",
+          "text": "Noch keine Eingaben · Speichern deaktiviert"
+        }
+      ],
+      "empty_not_applicable": "",
+      "next_step": "bean-detail",
+      "note": "Einspaltig,optionale erste Packung;Edit /beans/:id/edit. EN No values yet / Save / Cancel;Feldfehler,Abbrechen verwirft."
+    },
+    {
+      "id": "pack-new",
+      "name": "Packung erfassen / Add pack",
+      "route": "/beans/:id/packs/new",
+      "nav": "beans",
+      "focus": false,
+      "filled": [
+        {
+          "type": "field",
+          "label": "Röstdatum",
+          "value": "01.11.2026"
+        },
+        {
+          "type": "field",
+          "label": "Gewicht",
+          "value": "250",
+          "suffix": "g"
+        },
+        {
+          "type": "field",
+          "label": "Geöffnet am"
+        },
+        {
+          "type": "button",
+          "text": "Speichern",
+          "variant": "primary",
+          "go": "bean-detail"
+        }
+      ],
+      "empty": [
+        {
+          "type": "field",
+          "label": "Röstdatum"
+        },
+        {
+          "type": "text",
+          "text": "Noch keine Eingaben · Speichern deaktiviert"
+        }
+      ],
+      "empty_not_applicable": "",
+      "next_step": "bean-detail",
+      "note": "Rest bei Anlage gleich Gewicht. openedAt optional UTC-Zeitstempel;Korrektur/Rücknahme erlaubt,updatedAt neu. Pflichtdatum fehlt→Fehler. EN Save / Cancel."
+    },
+    {
+      "id": "brews",
+      "name": "Brühungen / Brews",
+      "route": "/brews",
+      "nav": "brews",
+      "focus": false,
+      "filled": [
+        {
+          "type": "item",
+          "title": "Espresso · Sierra",
+          "meta": "17 g → 34 g · 27 s",
+          "badge": "4 / 5",
+          "art": "Bohnenverlauf mit Tasse"
+        },
+        {
+          "type": "button",
+          "text": "Filter starten",
+          "variant": "secondary",
+          "go": "filter-setup"
+        },
+        {
+          "type": "button",
+          "text": "Brühung erfassen",
+          "variant": "primary",
+          "go": "brew-new"
+        }
+      ],
+      "empty": [
+        {
+          "type": "empty",
+          "icon": "coffee",
+          "title": "Noch keine Brühungen",
+          "text": "Erfasse deinen ersten Shot.",
+          "action": "Brühung erfassen"
+        }
+      ],
+      "empty_not_applicable": "",
+      "next_step": "brew-detail",
+      "note": "Neueste zuerst;Karte öffnet Detail. EN No brews yet / Log a brew."
+    },
+    {
+      "id": "brew-new",
+      "name": "Brühung erfassen / Log a brew",
+      "route": "/brews/new",
+      "nav": "brews",
+      "focus": false,
+      "filled": [
+        {
+          "type": "field",
+          "label": "Maschine",
+          "value": "Maschine M1 · 93 °C"
+        },
+        {
+          "type": "field",
+          "label": "Mühle",
+          "value": "Mühle M1"
+        },
+        {
+          "type": "field",
+          "label": "Mahlgrad",
+          "value": "12.0"
+        },
+        {
+          "type": "field",
+          "label": "Dosis",
+          "value": "17",
+          "suffix": "g"
+        },
+        {
+          "type": "field",
+          "label": "Tatsächliche Spülmenge",
+          "value": "1",
+          "suffix": "g"
+        },
+        {
+          "type": "field",
+          "label": "Ausbeute",
+          "value": "34",
+          "suffix": "g"
+        },
+        {
+          "type": "big",
+          "text": "00:27",
+          "sub": "Shot-Timer"
+        },
+        {
+          "type": "button",
+          "text": "Speichern",
+          "variant": "primary",
+          "go": "brew-detail"
+        }
+      ],
+      "empty": [
+        {
+          "type": "empty",
+          "icon": "dial",
+          "title": "Zuerst eine Mühle anlegen",
+          "text": "Erfasse die Ausrüstung.",
+          "action": "Mühle hinzufügen"
+        }
+      ],
+      "empty_not_applicable": "",
+      "next_step": "brew-detail",
+      "note": "Zusätzlich Packung,Wasser,Geschmack,Bewertung,Notiz. Purge-Vorschlag allein bucht nichts,nur bestätigter tatsächlicher Wert. Pause/Resume persistent. EN Add a grinder first / Actual purge amount / Save."
+    },
+    {
+      "id": "brew-detail",
+      "name": "Brühungsdetail / Brew details",
+      "route": "/brews/:id",
+      "nav": "brews",
+      "focus": false,
+      "filled": [
+        {
+          "type": "text",
+          "text": "17 g → 34 g · 27 s · Mahlgrad 12.0"
+        },
+        {
+          "type": "card",
+          "title": "Empfehlung",
+          "blocks": [
+            {
+              "type": "text",
+              "text": "Mahlgrad auf 11.5 · Eine Stufe feiner: sauer, Zeit im Zielbereich."
+            },
+            {
+              "type": "muted",
+              "text": "Clive Coffee · Produktheuristik R9"
+            }
+          ]
+        },
+        {
+          "type": "button",
+          "text": "Nächster Versuch",
+          "variant": "primary",
+          "go": "brew-new"
+        }
+      ],
+      "empty": [
+        {
+          "type": "empty",
+          "icon": "coffee",
+          "title": "Brühung nicht gefunden",
+          "text": "Öffne die Brühungsliste.",
+          "action": "Zu Brühungen"
+        }
+      ],
+      "empty_not_applicable": "",
+      "next_step": "brew-new",
+      "note": "Kopiert Methode,Geräte,Pack,Wasser,Dosis,tatsächlichen Purge,Ausbeute/Rezept,Temperatur,Preinfusion,Druckprofil,Mahlgrad;Zeit/Geschmack/Bewertung leer,neue operationId. grind→nur Mahlgrad einsetzen;none→alles gleich;water→Wasserwarnung und manuelle Auswahl;rest→Bereit-Datum/manuelle bereite Packung,Filterstart bei unreifer Packung blockiert. Bestand/Archivierung neu prüfen. EN Next try."
+    },
+    {
+      "id": "filter-setup",
+      "name": "Filter vorbereiten / Filter setup",
+      "route": "/filter",
+      "nav": "brews",
+      "focus": false,
+      "filled": [
+        {
+          "type": "chips",
+          "items": [
+            {
+              "text": "V60",
+              "label": "",
+              "value": "",
+              "tone": "accent"
+            },
+            {
+              "text": "Chemex",
+              "label": "",
+              "value": "",
+              "tone": ""
+            },
+            {
+              "text": "Kalita",
+              "label": "",
+              "value": "",
+              "tone": ""
+            },
+            {
+              "text": "AeroPress",
+              "label": "",
+              "value": "",
+              "tone": ""
+            },
+            {
+              "text": "Batch",
+              "label": "",
+              "value": "",
+              "tone": ""
+            }
+          ]
+        },
+        {
+          "type": "field",
+          "label": "Dosis",
+          "value": "20",
+          "suffix": "g"
+        },
+        {
+          "type": "field",
+          "label": "Verhältnis",
+          "value": "1:16"
+        },
+        {
+          "type": "field",
+          "label": "Tatsächliche Spülmenge",
+          "value": "1",
+          "suffix": "g"
+        },
+        {
+          "type": "text",
+          "text": "Vorschlag: 2.5 g · erst tatsächlicher bestätigter Verbrauch wird gebucht"
+        },
+        {
+          "type": "text",
+          "text": "40 → 120 → 220 → 320 g"
+        },
+        {
+          "type": "button",
+          "text": "Starten",
+          "variant": "primary",
+          "go": "filter-focus"
+        }
+      ],
+      "empty": [
+        {
+          "type": "empty",
+          "icon": "coffee",
+          "title": "Keine bereite Packung",
+          "text": "Füge bereite Bohnen hinzu.",
+          "action": "Zu Bohnen"
+        }
+      ],
+      "empty_not_applicable": "",
+      "next_step": "filter-focus",
+      "note": "Alle5 Methoden,Mühle/Raster,Wasser,nur bereite Packs,Blends nachrangig. purgeG0–50 g,Vorbelegung unbestätigt. Start ohne Pack deaktiviert. EN No ready pack / Actual purge amount / Start."
+    },
+    {
+      "id": "filter-focus",
+      "name": "Filter geführt / Guided filter",
+      "route": "/filter/focus",
+      "nav": "brews",
+      "focus": true,
+      "filled": [
+        {
+          "type": "big",
+          "text": "00:45",
+          "sub": "Seit erstem Aufguss"
+        },
+        {
+          "type": "big",
+          "text": "Giesse bis 120 g",
+          "sub": "Jetzt 80 g dazugeben"
+        },
+        {
+          "type": "button",
+          "text": "Weiter",
+          "variant": "primary",
+          "go": "filter-finish"
+        },
+        {
+          "type": "button",
+          "text": "Abbrechen",
+          "variant": "secondary",
+          "go": "filter-setup"
+        }
+      ],
+      "empty": [
+        {
+          "type": "empty",
+          "icon": "coffee",
+          "title": "Keine laufende Brühung",
+          "text": "Bereite einen Filter vor.",
+          "action": "Filter vorbereiten"
+        }
+      ],
+      "empty_not_applicable": "",
+      "next_step": "filter-finish",
+      "note": "72-sp Timer/48-sp Ziel,keine Navigation. Weiter je Schritt,nur letzter zum Finish. Pause erhält pausedAt und accumulatedPausedMs über Neustart. Abbruch fragt nach physischem Verbrauch. EN Next / Cancel."
+    },
+    {
+      "id": "filter-finish",
+      "name": "Filter abschliessen / Finish filter",
+      "route": "/filter/finish",
+      "nav": "brews",
+      "focus": false,
+      "filled": [
+        {
+          "type": "field",
+          "label": "Gesamtzeit",
+          "value": "200",
+          "suffix": "s"
+        },
+        {
+          "type": "field",
+          "label": "Geschmack",
+          "value": "Ausgewogen"
+        },
+        {
+          "type": "field",
+          "label": "Bewertung",
+          "value": "4 / 5"
+        },
+        {
+          "type": "field",
+          "label": "Tatsächliche Spülmenge",
+          "value": "1",
+          "suffix": "g"
+        },
+        {
+          "type": "text",
+          "text": "Verbrauch bestätigen: 20 g + 1 g"
+        },
+        {
+          "type": "button",
+          "text": "Speichern und Verbrauch bestätigen",
+          "variant": "primary",
+          "go": "brew-detail"
+        }
+      ],
+      "empty": [
+        {
+          "type": "empty",
+          "icon": "coffee",
+          "title": "Keine laufende Brühung",
+          "text": "Bereite einen Filter vor.",
+          "action": "Filter vorbereiten"
+        }
+      ],
+      "empty_not_applicable": "",
+      "next_step": "brew-detail",
+      "note": "Purge erneut editierbar;erst expliziter Save bestätigt tatsächlichen Verbrauch21 g atomar/einmal.Zurück erhält Entwurf.Abbruch nach Mahlen mit ConsumptionEvent-Weg. EN Actual purge amount / Confirm consumption:20 g+1 g / Save and confirm consumption."
+    },
+    {
+      "id": "equipment",
+      "name": "Ausrüstung / Equipment",
+      "route": "/equipment",
+      "nav": "equipment",
+      "focus": false,
+      "filled": [
+        {
+          "type": "item",
+          "title": "Mühle M1",
+          "meta": "Skala 1–30 · Schritt 0.5 · Totraum 2.5 g",
+          "art": "270° Skalenbogen"
+        },
+        {
+          "type": "button",
+          "text": "Mühle hinzufügen",
+          "variant": "primary",
+          "go": "grinder-form"
+        },
+        {
+          "type": "button",
+          "text": "Maschine hinzufügen",
+          "variant": "secondary",
+          "go": "machine-form"
+        }
+      ],
+      "empty": [
+        {
+          "type": "empty",
+          "icon": "dial",
+          "title": "Noch keine Ausrüstung",
+          "text": "Lege deine Mühle mit Skala und Totraum an.",
+          "action": "Mühle hinzufügen"
+        }
+      ],
+      "empty_not_applicable": "",
+      "next_step": "grinder-form",
+      "note": "Tabs,Mühlenkarten mit Skala,Maschinen mit Pflege-Ring;Karte öffnet Bearbeiten. Maschinen-Tab primär Maschine hinzufügen. EN No equipment yet."
+    },
+    {
+      "id": "grinder-form",
+      "name": "Mühle erfassen / Add grinder",
+      "route": "/equipment/grinders/new",
+      "nav": "equipment",
+      "focus": false,
+      "filled": [
+        {
+          "type": "field",
+          "label": "Name",
+          "value": "Mühle M1"
+        },
+        {
+          "type": "field",
+          "label": "Typ",
+          "value": "Konisches Mahlwerk"
+        },
+        {
+          "type": "field",
+          "label": "Skala",
+          "value": "1–30"
+        },
+        {
+          "type": "field",
+          "label": "Schritt",
+          "value": "0.5"
+        },
+        {
+          "type": "field",
+          "label": "Feiner",
+          "value": "Kleinere Zahl"
+        },
+        {
+          "type": "field",
+          "label": "Totraum",
+          "value": "2.5",
+          "suffix": "g"
+        },
+        {
+          "type": "field",
+          "label": "Reinigung alle",
+          "value": "28",
+          "suffix": "Tage"
+        },
+        {
+          "type": "button",
+          "text": "Speichern",
+          "variant": "primary",
+          "go": "equipment"
+        }
+      ],
+      "empty": [
+        {
+          "type": "field",
+          "label": "Name"
+        },
+        {
+          "type": "text",
+          "text": "Noch keine Eingaben · Speichern deaktiviert"
+        }
+      ],
+      "empty_not_applicable": "",
+      "next_step": "equipment",
+      "note": "Echte Geräteskala;grinderCleanDays persistiert. Edit /equipment/grinders/:id/edit. EN Save / Cancel."
+    },
+    {
+      "id": "machine-form",
+      "name": "Maschine erfassen / Add machine",
+      "route": "/equipment/machines/new",
+      "nav": "equipment",
+      "focus": false,
+      "filled": [
+        {
+          "type": "field",
+          "label": "Name",
+          "value": "Maschine M1"
+        },
+        {
+          "type": "field",
+          "label": "Temperatur",
+          "value": "93",
+          "suffix": "°C"
+        },
+        {
+          "type": "field",
+          "label": "Preinfusion",
+          "value": "8",
+          "suffix": "s"
+        },
+        {
+          "type": "field",
+          "label": "Druckprofil",
+          "value": "9 bar konstant"
+        },
+        {
+          "type": "field",
+          "label": "Standardwasser",
+          "value": "Küche"
+        },
+        {
+          "type": "field",
+          "label": "Backflush alle",
+          "value": "7",
+          "suffix": "Tage"
+        },
+        {
+          "type": "field",
+          "label": "Backflush nach",
+          "value": "200",
+          "suffix": "Shots"
+        },
+        {
+          "type": "button",
+          "text": "Speichern",
+          "variant": "primary",
+          "go": "equipment"
+        }
+      ],
+      "empty": [
+        {
+          "type": "field",
+          "label": "Name"
+        },
+        {
+          "type": "text",
+          "text": "Noch keine Eingaben · Speichern deaktiviert"
+        }
+      ],
+      "empty_not_applicable": "",
+      "next_step": "equipment",
+      "note": "Erweitert:backflushSupported=false,backflushDays7,backflushShots200,brewSecondsLimit=null nur Backflush,descaleDaysOverride=null. Positive Integer;Entkalkung ohne Override Wasserstaffel30/60/90. Edit /equipment/machines/:id/edit. EN Save / Cancel."
+    },
+    {
+      "id": "water",
+      "name": "Wasser / Water",
+      "route": "/water",
+      "nav": "water",
+      "focus": false,
+      "filled": [
+        {
+          "type": "item",
+          "title": "Küche",
+          "meta": "15.0 °fH · 1 von 6 gemessen",
+          "badge": "Gemessene Werte im Referenzbereich",
+          "art": "Tropfen und Härtebalken"
+        },
+        {
+          "type": "button",
+          "text": "Wasserprofil hinzufügen",
+          "variant": "primary",
+          "go": "water-form"
+        }
+      ],
+      "empty": [
+        {
+          "type": "empty",
+          "icon": "water",
+          "title": "Noch kein Wasserprofil",
+          "text": "Erfasse die Härte deines Wassers.",
+          "action": "Wasserprofil hinzufügen"
+        }
+      ],
+      "empty_not_applicable": "",
+      "next_step": "water-detail",
+      "note": "Karten öffnen Detail. EN No water profile yet / Add water profile."
+    },
+    {
+      "id": "water-detail",
+      "name": "Wasserdetail / Water details",
+      "route": "/water/:id",
+      "nav": "water",
+      "focus": false,
+      "filled": [
+        {
+          "type": "big",
+          "text": "15.0 °fH",
+          "sub": "150 ppm Gesamthärte"
+        },
+        {
+          "type": "text",
+          "text": "Härte: Messwertbalken · Referenz 50–175 ppm"
+        },
+        {
+          "type": "text",
+          "text": "Alkalinität: nicht gemessen"
+        },
+        {
+          "type": "text",
+          "text": "TDS: nicht gemessen"
+        },
+        {
+          "type": "text",
+          "text": "pH: nicht gemessen"
+        },
+        {
+          "type": "text",
+          "text": "Natrium: nicht gemessen"
+        },
+        {
+          "type": "text",
+          "text": "Chlor: nicht gemessen"
+        },
+        {
+          "type": "button",
+          "text": "Bearbeiten",
+          "variant": "primary",
+          "go": "water-form"
+        }
+      ],
+      "empty": [
+        {
+          "type": "empty",
+          "icon": "water",
+          "title": "Wasserprofil nicht gefunden",
+          "text": "Öffne die Wasserliste.",
+          "action": "Zu Wasser"
+        }
+      ],
+      "empty_not_applicable": "",
+      "next_step": "water-form",
+      "note": "Alle6 Labels sichtbar;gemessen→Wertbalken/Grenzen/Quelle/Status;ungemessen→nur Text,kein Messwertbalken,nicht als0 darstellen.LF9 gilt so. EN not measured / Edit."
+    },
+    {
+      "id": "water-form",
+      "name": "Wasserprofil erfassen / Add water profile",
+      "route": "/water/new",
+      "nav": "water",
+      "focus": false,
+      "filled": [
+        {
+          "type": "field",
+          "label": "Name",
+          "value": "Küche"
+        },
+        {
+          "type": "field",
+          "label": "Härte",
+          "value": "15",
+          "suffix": "°fH"
+        },
+        {
+          "type": "field",
+          "label": "Alkalinität (optional)",
+          "suffix": "ppm"
+        },
+        {
+          "type": "button",
+          "text": "Speichern",
+          "variant": "primary",
+          "go": "water-detail"
+        }
+      ],
+      "empty": [
+        {
+          "type": "field",
+          "label": "Name"
+        },
+        {
+          "type": "field",
+          "label": "Härte",
+          "suffix": "°fH"
+        },
+        {
+          "type": "text",
+          "text": "Noch keine Eingaben · Speichern deaktiviert"
+        }
+      ],
+      "empty_not_applicable": "",
+      "next_step": "water-detail",
+      "note": "Optionale TDS/pH/Natrium/Chlor;Einheitwechsel erhält ppm.Edit /water/:id/edit.EN Save / Cancel."
+    },
+    {
+      "id": "care",
+      "name": "Pflege / Care",
+      "route": "/care",
+      "nav": "care",
+      "focus": false,
+      "filled": [
+        {
+          "type": "item",
+          "title": "Maschine M1 · Backflush",
+          "meta": "7 Tage · 90 Shots · 3000 s",
+          "badge": "Fällig"
+        },
+        {
+          "type": "banner",
+          "text": "Handbuch hat Vorrang. Geräte-Eignung prüfen.",
+          "tone": "warn"
+        },
+        {
+          "type": "button",
+          "text": "Erledigt",
+          "variant": "primary",
+          "go": "care"
+        }
+      ],
+      "empty": [
+        {
+          "type": "empty",
+          "icon": "clean",
+          "title": "Nichts zu pflegen",
+          "text": "Lege zuerst eine Maschine an.",
+          "action": "Maschine hinzufügen"
+        }
+      ],
+      "empty_not_applicable": "",
+      "next_step": "care",
+      "note": "Gerät+kind bindet Zählerbasis;Backflush setzt nur eigene Tage/Shots/Sekunden zurück;Entkalken nur eigene Tage,Mühle nur eigene Tage. EN Done."
+    },
+    {
+      "id": "more",
+      "name": "Mehr / More",
+      "route": "/more",
+      "nav": "more",
+      "focus": false,
+      "filled": [
+        {
+          "type": "button",
+          "text": "Wasser",
+          "variant": "primary",
+          "go": "water"
+        },
+        {
+          "type": "button",
+          "text": "Pflege",
+          "variant": "secondary",
+          "go": "care"
+        },
+        {
+          "type": "button",
+          "text": "Einstellungen",
+          "variant": "secondary",
+          "go": "settings"
+        }
+      ],
+      "empty": [],
+      "empty_not_applicable": "Navigation immer verfügbar,auch ohne Daten.",
+      "next_step": "water",
+      "note": "Phone/Tablet via Mehr,Desktop direkte Seitenleiste. EN Water / Care / Settings."
+    },
+    {
+      "id": "settings",
+      "name": "Einstellungen / Settings",
+      "route": "/settings",
+      "nav": "settings",
+      "focus": false,
+      "filled": [
+        {
+          "type": "chips",
+          "items": [
+            {
+              "text": "°fH",
+              "label": "",
+              "value": "",
+              "tone": "accent"
+            },
+            {
+              "text": "°dH",
+              "label": "",
+              "value": "",
+              "tone": ""
+            },
+            {
+              "text": "ppm",
+              "label": "",
+              "value": "",
+              "tone": ""
+            }
+          ]
+        },
+        {
+          "type": "button",
+          "text": "Exportieren",
+          "variant": "primary",
+          "go": "settings"
+        },
+        {
+          "type": "button",
+          "text": "Importieren",
+          "variant": "secondary",
+          "go": "settings"
+        },
+        {
+          "type": "text",
+          "text": "Quellen: Percolate, Coffee Hero, Clive Coffee · 18.11.2026"
+        }
+      ],
+      "empty": [
+        {
+          "type": "text",
+          "text": "Noch keine eigenen Daten"
+        },
+        {
+          "type": "button",
+          "text": "Exportieren",
+          "variant": "primary",
+          "go": "settings"
+        }
+      ],
+      "empty_not_applicable": "",
+      "next_step": "settings",
+      "note": "Kanonischer Export inkl.consumptionEvents und settings.hardnessUnit. settings lokales Singleton,Import ersetzt atomar ohne updatedAt. Quellenlink nur durch expliziten Tap extern im Browser;keine automatischen Netzabrufe. EN Export / Import."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Bohne",
+      "translation": "coffee / bean",
+      "avoid": [
+        "Packung als Sorte"
+      ]
+    },
+    {
+      "term": "Röster",
+      "translation": "roaster",
+      "avoid": []
+    },
+    {
+      "term": "Packung",
+      "translation": "pack",
+      "avoid": [
+        "Bohne als Packung"
+      ]
+    },
+    {
+      "term": "Röstgrad",
+      "translation": "roast level",
+      "avoid": []
+    },
+    {
+      "term": "Ruhezeit",
+      "translation": "rest time",
+      "avoid": [
+        "Trinkfreigabe"
+      ]
+    },
+    {
+      "term": "Bereit-Datum",
+      "translation": "ready date",
+      "avoid": [
+        "Verfallsdatum"
+      ]
+    },
+    {
+      "term": "Mühle",
+      "translation": "grinder",
+      "avoid": []
+    },
+    {
+      "term": "Mahlgrad",
+      "translation": "grind setting",
+      "avoid": [
+        "universeller Mahlgrad"
+      ]
+    },
+    {
+      "term": "Rasterstufe",
+      "translation": "scale step",
+      "avoid": [
+        "erfundener Geräteklick"
+      ]
+    },
+    {
+      "term": "Totraum",
+      "translation": "dead space / confirmed purge amount",
+      "avoid": [
+        "automatische Retentionsmessung"
+      ]
+    },
+    {
+      "term": "Spülmenge",
+      "translation": "purge amount",
+      "avoid": [
+        "Wasserspülung"
+      ]
+    },
+    {
+      "term": "Maschine",
+      "translation": "machine",
+      "avoid": []
+    },
+    {
+      "term": "Preinfusion",
+      "translation": "preinfusion",
+      "avoid": []
+    },
+    {
+      "term": "Druckprofil",
+      "translation": "pressure profile",
+      "avoid": []
+    },
+    {
+      "term": "Brühung",
+      "translation": "brew",
+      "avoid": [
+        "Shot für Filter"
+      ]
+    },
+    {
+      "term": "Dosis",
+      "translation": "dose",
+      "avoid": []
+    },
+    {
+      "term": "Ausbeute",
+      "translation": "beverage yield",
+      "avoid": [
+        "Filter-Eingangswasser"
+      ]
+    },
+    {
+      "term": "Shot-Timer",
+      "translation": "shot timer",
+      "avoid": []
+    },
+    {
+      "term": "Bloom",
+      "translation": "bloom",
+      "avoid": []
+    },
+    {
+      "term": "Aufguss",
+      "translation": "pour",
+      "avoid": []
+    },
+    {
+      "term": "Zwischensumme",
+      "translation": "cumulative water",
+      "avoid": [
+        "zusätzliche Menge"
+      ]
+    },
+    {
+      "term": "Abfluss-Zeit",
+      "translation": "drawdown time",
+      "avoid": []
+    },
+    {
+      "term": "Verhältnis",
+      "translation": "ratio",
+      "avoid": []
+    },
+    {
+      "term": "Wasserprofil",
+      "translation": "water profile",
+      "avoid": [
+        "Trinkbarkeitsfreigabe"
+      ]
+    },
+    {
+      "term": "Härte",
+      "translation": "hardness",
+      "avoid": [
+        "TDS als Härte"
+      ]
+    },
+    {
+      "term": "Alkalinität",
+      "translation": "alkalinity",
+      "avoid": [
+        "pH als Alkalinität"
+      ]
+    },
+    {
+      "term": "Bestand",
+      "translation": "stock",
+      "avoid": []
+    },
+    {
+      "term": "Mindestbestand",
+      "translation": "minimum stock",
+      "avoid": []
+    },
+    {
+      "term": "Bestellpunkt",
+      "translation": "reorder point",
+      "avoid": [
+        "automatische Bestellung"
+      ]
+    },
+    {
+      "term": "Lücke",
+      "translation": "readiness gap",
+      "avoid": []
+    },
+    {
+      "term": "Pflege",
+      "translation": "care",
+      "avoid": []
+    },
+    {
+      "term": "Backflush",
+      "translation": "backflush",
+      "avoid": [
+        "für jede Maschine geeignet"
+      ]
+    },
+    {
+      "term": "Entkalken",
+      "translation": "descale",
+      "avoid": []
+    },
+    {
+      "term": "Geschmack",
+      "translation": "taste",
+      "avoid": []
+    },
+    {
+      "term": "Empfehlung",
+      "translation": "recommendation",
+      "avoid": [
+        "Garantie"
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "word": "bereit",
+      "definition": "remainingG>0,readyDate≤heute,heute<roastDate+45 für Methode"
+    },
+    {
+      "word": "ruht",
+      "definition": "heute<readyDate,Resttage=readyDate−heute"
+    },
+    {
+      "word": "zu alt",
+      "definition": "heute≥roastDate+45"
+    },
+    {
+      "word": "leer",
+      "definition": "remainingG0 oder keine nicht archivierten Listeneinträge"
+    },
+    {
+      "word": "ausserhalb Referenzbereich",
+      "definition": "Mindestens ein gemessener Wert verletzt R2"
+    },
+    {
+      "word": "gemessene Werte im Referenzbereich",
+      "definition": "Alle nicht-null Werte inR2,immer n/6"
+    },
+    {
+      "word": "nicht gemessen",
+      "definition": "Feld=null,nicht0"
+    },
+    {
+      "word": "niedriger Bestand",
+      "definition": "Nicht alter Bestand≤Verbrauch×(Lieferzeit+Ruhe)+Minimum"
+    },
+    {
+      "word": "ohne Historie",
+      "definition": "Weder berücksichtigte Brew noch ConsumptionEvent im28-Tage-Fenster"
+    },
+    {
+      "word": "Lücke",
+      "definition": "Tagesweise volle Nachfrage nicht aus an diesem Tag bereiten nicht alten Packs deckbar"
+    },
+    {
+      "word": "fällig",
+      "definition": "Ein Limit dieser Aufgabe seit ihrem letzten passenden CareEvent erreicht"
+    },
+    {
+      "word": "Skalenende",
+      "definition": "Kandidat ausserhalb scaleMin..scaleMax,R9/R11 begrenzen"
+    },
+    {
+      "word": "Bohnenwechsel",
+      "definition": "Letzte bestätigte beanId dieser grinderId unterscheidet sich"
+    },
+    {
+      "word": "ungenutzt",
+      "definition": "Seit bestätigter Mahlung dieser grinderId≥24 h"
+    },
+    {
+      "word": "archiviert",
+      "definition": "deletedAt!=null,Historie auflösbar,Auswahl ausgeschlossen"
+    },
+    {
+      "word": "pausiert",
+      "definition": "status=paused,pausedAt gesetzt,effectiveNow=pausedAt"
+    },
+    {
+      "word": "bestätigter Purge",
+      "definition": "Vom Nutzer bestätigte tatsächliche purgeG,nicht nur vorgeschlagene deadSpaceG"
+    }
+  ],
+  "rules": [
+    {
+      "id": "R1",
+      "title": "Härte",
+      "text": "1 °fH=10 ppm,1 °dH=17.848 ppm;Anzeige1 Dezimale.",
+      "identifier": "hardnessPpm",
+      "numeric": true,
+      "params": [],
+      "examples": [
+        {
+          "given": "15 °fH;8.4 °dH",
+          "expect": "150.0 ppm;149.9 ppm",
+          "realistic": true
+        }
+      ]
+    },
+    {
+      "id": "R2",
+      "title": "Wasser zuerst",
+      "text": "TDS75–250,Gesamthärte50–175,Alkalinität40–75 ppm,pH6.5–7.5,Natrium≤10 mg/L,Chlor0. Produkt-Literaturprofil,null nicht gemessen,n/6 zeigen.",
+      "identifier": "waterRules",
+      "numeric": true,
+      "params": [],
+      "examples": [
+        {
+          "given": "30 °fH",
+          "expect": "300 ppm,125 ppm über Maximum,Wasser zuerst",
+          "realistic": true
+        }
+      ]
+    },
+    {
+      "id": "R3",
+      "title": "Bereitschaft und Sortierung",
+      "text": "readyDate=roastDate+Ruhe;Filter7/5/4/3,Espresso14/10/7/5 Tage nach Röstgrad;alt ab45 Tage. Bohnen gruppiert0 bereit nicht alt Rest>0,1 nur ruhend,2 nur alt,3 leer. Datum nur qualifizierender Packs,dann lowercaseName,createdAt,id;Gruppe2/3 Datum unendlich. Filter-Blends nachrangig.",
+      "identifier": "restDays",
+      "numeric": true,
+      "params": [],
+      "examples": [
+        {
+          "given": "medium01.11.2026",
+          "expect": "Filter06.11.,Espresso11.11.,alt16.12.",
+          "realistic": true
+        },
+        {
+          "given": "A leere Packung01.11.+ruhende25.11.;B50 g bereit11.11.",
+          "expect": "B Gruppe0 vor A Gruppe1",
+          "realistic": true
+        }
+      ]
+    },
+    {
+      "id": "R4",
+      "title": "Verbrauch einschliesslich Waste",
+      "text": "Summe bestätigter Brew.doseG+Brew.purgeG und ConsumptionEvent.wasteG per packId der Bohne in28 vollständigen lokalen Tagen/28,jeden Verbrauch einmal. Ohne Historie=nicht eine berücksichtigte Brühung und nicht ein berücksichtigtes ConsumptionEvent;leeres Fenster0.",
+      "identifier": "consumptionPerDay",
+      "numeric": true,
+      "params": [],
+      "examples": [
+        {
+          "given": "Nur56 g Waste in28 Tagen",
+          "expect": "2 g/Tag,Standardminimum4 g,Historie vorhanden",
+          "realistic": true
+        }
+      ]
+    },
+    {
+      "id": "R5",
+      "title": "Bestellpunkt",
+      "text": "Minimum manuell oder2 Verbrauchstage,ohne Historie100 g;Bestellpunkt=Verbrauch×(leadTimeDays+Ruhe)+Minimum,leadTimeDays Standard3 Tage. Hinweis bei≤. Bar orderPoint0 ohne Division:Bestand>0 voll success,sonst leer error,keine Schwellenmarke.",
+      "identifier": "orderPoint",
+      "numeric": true,
+      "params": [],
+      "examples": [
+        {
+          "given": "18 g/Tag,Lieferung3 Tage,Ruhe10 Tage,250 g",
+          "expect": "Minimum36 g,Bestellpunkt270 g,Bestellhinweis",
+          "realistic": true
+        },
+        {
+          "given": "Minimum0,Verbrauch0,Bestand250 g",
+          "expect": "Voller grüner Balken,keine Schwellenmarke,Kein Mindestbestand",
+          "realistic": true
+        }
+      ]
+    },
+    {
+      "id": "R6",
+      "title": "Autoritative Tages-Simulation",
+      "text": "Tagesbeginn Bereitschaft/Alter je Packung prüfen,dann volle Tagesnachfrage decken;Zwischenpackungen und Ablauf beachten.Jede zusammenhängende Lücke von–bis mit Aktion.Ohne Verbrauch keine Prognose.Aggregat heute+floor(B/Verbrauch)−1 nur falls im ganzen betrachteten Zeitraum keine Packung bereit/alt wird,nie statt Simulation.",
+      "identifier": "runOutDate",
+      "numeric": true,
+      "params": [],
+      "examples": [
+        {
+          "given": "16.11.,90 g bei18 g/Tag,36 g ab21.11.,nächste25.11.",
+          "expect": "16.–20.11. durch90 g,21.–22.11. durch36 g,Lücke23.–24.11.",
+          "realistic": true
+        }
+      ]
+    },
+    {
+      "id": "R7",
+      "title": "Tatsächlicher bestätigter Purge",
+      "text": "Bei beanId-Wechsel oder≥24 h ungenutzt deadSpaceG vorschlagen.Nur bestätigte tatsächliche purgeG speichern und abziehen;Hinweis,Vorbelegung und unbestätigter Entwurf buchen0.",
+      "identifier": "purgeG",
+      "numeric": true,
+      "params": [],
+      "examples": [
+        {
+          "given": "Vorschlag2.5 g,tatsächlich bestätigt1 g,Dosis17 g",
+          "expect": "18 g Verbrauch,nicht19.5 g",
+          "realistic": true
+        }
+      ]
+    },
+    {
+      "id": "R8",
+      "title": "Pflege pro Aufgabe",
+      "text": "Machine.backflushDays7,backflushShots200,brewSecondsLimit null nur Backflush,descaleDaysOverride null;Grinder.grinderCleanDays28. Positive gesetzte Integer. Entkalkung ohne Override bei>150/100–150/<100 ppm30/60/90 Tage. Backflush-Abschluss setzt eigene Tage/Shots/Sekunden,Entkalken eigene Tage,Mühle eigene Tage;createdOn ohne Ereignis. Handbuchvorrang,backflushSupported=false.",
+      "identifier": "careRules",
+      "numeric": true,
+      "params": [],
+      "examples": [
+        {
+          "given": "Backflush-Sekunden2970+30,Limit3000,danach Entkalken",
+          "expect": "Backflush fällig,Stand bleibt3000 s;erst Backflush-Abschluss setzt0 s",
+          "realistic": true
+        }
+      ]
+    },
+    {
+      "id": "R9",
+      "title": "Espresso-Ergebnisse",
+      "text": "Priorität water,rest,grind/none. Ziel25–30 s/1:2;unter25 feiner,über30 gröber,2 Schritte nur unter20/über35.Im Fenster sauer/schwach feiner,bitter gröber,balanced none. Echte Skala/Richtung,Skalenende,Grund/Quelle.",
+      "identifier": "grindSetting",
+      "numeric": true,
+      "params": [],
+      "examples": [
+        {
+          "given": "M1 min1 max30 Schritt0.5 finerDirection down,Einstellung12.0,sauer27 s,Wasser im Bereich,Pack Espresso-bereit nicht alt",
+          "expect": "grind11.5,nur Mahlgrad ändern",
+          "realistic": true
+        }
+      ]
+    },
+    {
+      "id": "R10",
+      "title": "Gerundeter Filterplan",
+      "text": "Ratio16,14–18 Schritt0.5. Zuerst waterTotalG=roundHalfUp(doseG×ratio),bloomG=roundHalfUp(2×doseG),dann Ziele roundHalfUp(.375W),roundHalfUp(.6875W),W. .5 aufrunden,keine Dosisrundung,Inkremente aus gerundeten Zieldifferenzen. Offsets0/45/75/120 s,Ziel180–210 s,92–96 °C. Andere Methoden als Produktschema.",
+      "identifier": "filterRecipe",
+      "numeric": true,
+      "params": [],
+      "examples": [
+        {
+          "given": "Hario V60,20 g/1:16",
+          "expect": "W320,Bloom40,Ziele40/120/220/320 g",
+          "realistic": true
+        },
+        {
+          "given": "15.25 g/1:15",
+          "expect": "W228.75→229,Bloom30.5→31,Ziele31/86/157/229,Inkremente31/55/71/72 g",
+          "realistic": true
+        }
+      ]
+    },
+    {
+      "id": "R11",
+      "title": "Filter-Ergebnistypen",
+      "text": "water vor rest,dann grind oder none. >240 s gröber,<165 feiner je1;>270/<150 je2. Im Fenster sauer/schwach feiner,bitter gröber,balanced none. Nur numerischer Brühparametervorschlag ist Mahlgrad;Wasser/Ruhehinweise sind zulässige vorrangige Ergebnisse.",
+      "identifier": "filterRecommendation",
+      "numeric": true,
+      "params": [],
+      "examples": [
+        {
+          "given": "Balanced200 s,Wasser im Bereich,Pack bereit",
+          "expect": "none,keine Änderung",
+          "realistic": true
+        },
+        {
+          "given": "Gleiche Brühung,Härte300 ppm",
+          "expect": "water,kein zusätzlicher Mahlgradvorschlag",
+          "realistic": true
+        }
+      ]
+    },
+    {
+      "id": "R12",
+      "title": "Persistenz,aktive Pause und kanonischer Import",
+      "text": "drift/SQLite nativ/Wasm,Transaktionen,UUID-operationId,Snapshots/Soft Delete.Timerentwurf startedAt,accumulatedPausedMs0,pausedAt null,status running/paused,stoppedElapsedS null. Pause setzt pausedAt atomar;effectiveNow=pausedAt wenn paused sonst now;elapsed=floor(max(0,effectiveNow−startedAt−accumulatedPausedMs)/1000). Resume addiert now−pausedAt zu accumulatedPausedMs und leert pausedAt. Background/Neustart erhält Zustand. Import≤10 MiB: genau schemaVersion Integer1,exportedAt UTC-RFC3339-ms-String,grinders/machines/waterProfiles/beans/packs/brews/careEvents/consumptionEvents Arrays,settings Objekt mit hardnessUnit fH/dH/ppm. Fehlend/zusätzlich/falscher Typ/null/unbekannte Einheit→vollständig ablehnen. settings lokales Singleton,atomar ersetzen;Arrays neuer updatedAt gewinnt,Tombstones bleiben. Restore in frische DB.",
+      "identifier": "operationId",
+      "numeric": true,
+      "params": [],
+      "examples": [
+        {
+          "given": "250−17−2.5 g,gleiche operationId zweimal",
+          "expect": "230.5 g auch nach Neustart",
+          "realistic": true
+        },
+        {
+          "given": "Start10:00:00,Pause10:00:10,Neustart10:00:20,Resume10:00:25,Stop10:00:35",
+          "expect": "Neustart10 s,Pause15000 ms,Stop20 s",
+          "realistic": true
+        },
+        {
+          "given": "Import ohne consumptionEvents oder settings=null",
+          "expect": "Datei ablehnen,keine Änderung",
+          "realistic": true
+        }
+      ]
+    }
+  ],
+  "acceptance": [
+    {
+      "id": "AC1",
+      "text": "Vier unabhängige Mühlen;12.2 bei Raster0.5 ab1 abgelehnt."
+    },
+    {
+      "id": "AC2",
+      "text": "Maschine93 °C/8 s/Druckprofil/Standardwasser nach Neustart identisch."
+    },
+    {
+      "id": "AC3",
+      "text": "Zwei Packs getrennt;medium01.11.→Filter06.11.,Espresso11.11."
+    },
+    {
+      "id": "AC4",
+      "text": "250−17−2.5=230.5 g,Doppelspeichern gleich;18 g blockiert19.5 g."
+    },
+    {
+      "id": "AC5",
+      "text": "M1 min1 max30 Schritt0.5 feiner abwärts,12.0,sauer27 s,Wasser im Referenzbereich,Pack Espresso-bereit nicht alt→11.5 mit Grund/Quelle."
+    },
+    {
+      "id": "AC6",
+      "text": "30 °fH→300 ppm,Wasser zuerst;150 ppm sonst null zeigt1 von6."
+    },
+    {
+      "id": "AC7",
+      "text": "V60 20 g/16→320 g,Ziele40/120/220/320;15.25 g/15→229 g,Bloom31,Ziele31/86/157/229,Inkremente31/55/71/72."
+    },
+    {
+      "id": "AC8",
+      "text": "18 g/Tag,Lieferung3 Tage,Ruhe10→min36 g,Bestellpunkt270 g;ohne Historie100 g."
+    },
+    {
+      "id": "AC9",
+      "text": "16.11.,90 g/18 g pro Tag,nächste25.11.→21.–24.11.;Zwischen36 g ab21.11.→23.–24.11."
+    },
+    {
+      "id": "AC10",
+      "text": "10.11.Backflush→17.11.fällig;2970+30 erreicht3000 s;Erledigt nur eigene Aufgabe."
+    },
+    {
+      "id": "AC11",
+      "text": "Restore in frische DB;neuer updatedAt gewinnt,neuerer Tombstone13:00 gegenExport12:00 bleibt archiviert;fehlende Referenzen zählen."
+    },
+    {
+      "id": "AC12",
+      "text": "Emulator/Chrome:Neustart erhält Daten,UC1–UC9 offline mit drift."
+    },
+    {
+      "id": "AC13",
+      "text": "DE/EN gleiche ICU-Schlüssel,Systemfallback Englisch,de-CH Datum,keine Roh-IDs."
+    },
+    {
+      "id": "AC14",
+      "text": "20 Screens light/dark390/1280 dp,empty/filled/error/Interaktionen Screenshots,LF1–LF12;Text auch gross≥4.5:1,unbekannte Wasserwerte ohne Balken,orderPoint0 ohne Division/Marke."
+    },
+    {
+      "id": "AC15",
+      "text": "Format/Analyze/Zeilen/Unit/Widget/Chrome-Gesamtlauf ohne Skip grün;README/CHANGELOG je Story."
+    },
+    {
+      "id": "AC16",
+      "text": "Export Share-Sheet Android/iOS,Chrome Download;File-Picker-Import≤10 MiB,Restore in frische DB,Tombstones nach Konfliktregel."
+    },
+    {
+      "id": "AC17",
+      "text": "35−5=30 s nach Hintergrund;Neustart erhält Entwurf/Fortsetzen/Abbrechen."
+    },
+    {
+      "id": "AC18",
+      "text": "5 Filtermethoden,nur bereite nicht leere/nicht alte Packs,Espresso-Blends nachrangig."
+    },
+    {
+      "id": "AC19",
+      "text": "Nur56 g bestätigtes Waste/28 Tage→2 g/Tag,Minimum4 g,Historie vorhanden."
+    },
+    {
+      "id": "AC20",
+      "text": "A ruhend25.11.mit leerer alter Packung,B50 g bereit11.11.→B vor A."
+    },
+    {
+      "id": "AC21",
+      "text": "Filter20 g,Vorschlag2.5,tatsächlich bestätigt1 g→21 g Abzug;unbestätigt0 g."
+    },
+    {
+      "id": "AC22",
+      "text": "Backflush3000 s bleibt nach Entkalken3000 s,nach Backflush0 s."
+    },
+    {
+      "id": "AC23",
+      "text": "Start10:00:00,Pause10:00:10,Neustart10:00:20→10 s;Resume10:00:25,Stop10:00:35→20 s,Pause15000 ms."
+    },
+    {
+      "id": "AC24",
+      "text": "Import ohne consumptionEvents/ohne settings/settings=null→atomar ablehnen;gültiger Leerexport ersetzt hardnessUnit atomar."
+    },
+    {
+      "id": "AC25",
+      "text": "Next try water/rest keine automatische Änderung,passender Hinweis;grind nur Mahlgrad,none alles gleich."
+    },
+    {
+      "id": "AC26",
+      "text": "Quellenlink nur nach Nutzeraktion extern;keine automatische Netzabfrage."
+    },
+    {
+      "id": "AC27",
+      "text": "Öffnen UTC-ms-Zeitstempel+updatedAt,Rücknahme openedAt=null,Bestand/Snapshots unverändert."
+    }
+  ]
+}
