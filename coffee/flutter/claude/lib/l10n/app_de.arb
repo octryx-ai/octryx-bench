@@ -1,0 +1,578 @@
+{
+  "@@locale": "de",
+  "appTitle": "Kaffee-Begleiter",
+  "today": "Heute",
+  "beans": "Bohnen",
+  "brew": "Brühen",
+  "equipment": "Ausrüstung",
+  "more": "Mehr",
+  "water": "Wasser",
+  "care": "Pflege",
+  "settings": "Einstellungen",
+  "save": "Speichern",
+  "cancel": "Abbrechen",
+  "ready": "Bereit",
+  "restingDays": "{n, plural, =1{Ruht noch 1 Tag} other{Ruht noch {n} Tage}}",
+  "tooOld": "Zu alt",
+  "comingSoon": "Kommt bald",
+  "comingSoonBody": "Dieser Teil der App folgt in einer späteren Version.",
+  "retry": "Erneut versuchen",
+  "noImage": "Kein Bild",
+  "defaultWithoutSource": "Standardwert ohne Quelle",
+  "sourceLabel": "Quelle: {source} (abgerufen {date})",
+  "bannerInfo": "Info",
+  "bannerWarning": "Warnung",
+  "bannerError": "Fehler",
+  "styleGuide": "Style-Guide",
+  "navigation": "Navigation",
+  "add": "Hinzufügen",
+  "back": "Zurück",
+  "startFilter": "Filter starten",
+  "grinders": "Mühlen",
+  "machines": "Maschinen",
+  "beanDetail": "Bohnendetail",
+  "beanForm": "Bohne hinzufügen",
+  "brewForm": "Brühung erfassen",
+  "brewDetail": "Brühungsdetail",
+  "filterGuided": "Filter geführt",
+  "grinderForm": "Mühle hinzufügen",
+  "machineForm": "Maschine hinzufügen",
+  "waterForm": "Wasserprofil hinzufügen",
+  "openBeanDetail": "Bohne öffnen",
+  "openBrewDetail": "Brühung öffnen",
+  "emptyTitle": "Noch nichts da",
+  "emptyBody": "Lege deine erste Bohne an.",
+  "addBean": "Bohne hinzufügen",
+  "loading": "Lädt",
+  "errorBody": "Etwas ist schiefgelaufen.",
+  "stateDefault": "Standard",
+  "stateHover": "Hover",
+  "statePressed": "Gedrückt",
+  "stateFocus": "Fokus",
+  "stateDisabled": "Deaktiviert",
+  "stateLoading": "Lädt",
+  "stateSelected": "Ausgewählt",
+  "stateEmpty": "Leer",
+  "stateError": "Fehler",
+  "sgIntro": "Jede Komponente in jedem Zustand, im aktuellen Theme.",
+  "sgColors": "Farben",
+  "sgButtons": "Schaltflächen",
+  "sgCards": "Karten",
+  "sgFields": "Felder",
+  "sgChips": "Chips",
+  "sgBanners": "Banner",
+  "sgOther": "Weiteres",
+  "fieldLabel": "Bezeichnung",
+  "fieldHint": "Wert",
+  "fieldUnit": "g",
+  "fieldErrorText": "Wert zwischen 1 und 100 eingeben",
+  "bannerInfoText": "Deine Bohnen ruhen noch.",
+  "bannerWarningText": "Bohnen bald nachbestellen.",
+  "bannerErrorText": "Die Brühung konnte nicht gespeichert werden.",
+  "bannerAction": "Anzeigen",
+  "cardTitle": "Kartentitel",
+  "cardBody": "Karteninhalt in Papier-Anmutung.",
+  "ruleDemoKey": "Regel-Demo",
+  "aboutSources": "Über und Quellen",
+  "fieldName": "Name",
+  "edit": "Bearbeiten",
+  "deleteNamed": "{name} löschen",
+  "@deleteNamed": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "enterNumber": "Zahl eingeben",
+  "rangeError": "Wert zwischen {min} und {max} eingeben",
+  "@rangeError": {
+    "placeholders": {
+      "min": {
+        "type": "String"
+      },
+      "max": {
+        "type": "String"
+      }
+    }
+  },
+  "nameRequired": "Name eingeben",
+  "tooLong": "Höchstens {n} Zeichen verwenden",
+  "@tooLong": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "unitG": "g",
+  "unitS": "s",
+  "unitCelsius": "°C",
+  "unitPpm": "ppm",
+  "unitMgL": "mg/L",
+  "unitFh": "°fH",
+  "unitDh": "°dH",
+  "gramsValue": "{value} g",
+  "@gramsValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "secondsValue": "{value} s",
+  "@secondsValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "celsiusValue": "{value} °C",
+  "@celsiusValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "daysCount": "{n, plural, =1{1 Tag} other{{n} Tage}}",
+  "@daysCount": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "grinderAdd": "Mühle hinzufügen",
+  "grinderEditTitle": "Mühle bearbeiten",
+  "grindersEmptyTitle": "Noch keine Mühle",
+  "grindersEmptyBody": "Lege deine Mühle mit Skala und Totraum an.",
+  "scaleMin": "Skala Minimum",
+  "scaleMax": "Skala Maximum",
+  "scaleStep": "Skala Schritt",
+  "stepPositive": "Schritt muss grösser als 0 sein",
+  "scaleMaxAboveMin": "Maximum muss grösser als das Minimum sein",
+  "finerDirection": "Richtung für feiner",
+  "finerDown": "Abwärts (kleiner ist feiner)",
+  "finerUp": "Aufwärts (grösser ist feiner)",
+  "deadSpace": "Totraum",
+  "checkGrindSetting": "Mahlgrad prüfen",
+  "grindSettingNotOnScale": "Wert liegt nicht auf der Skala der Mühle (Schritt {step})",
+  "@grindSettingNotOnScale": {
+    "placeholders": {
+      "step": {
+        "type": "String"
+      }
+    }
+  },
+  "machineAdd": "Maschine hinzufügen",
+  "machineEditTitle": "Maschine bearbeiten",
+  "machinesEmptyTitle": "Noch keine Maschine",
+  "machinesEmptyBody": "Lege deine Maschine mit Einstellungen an.",
+  "brewTemp": "Brühtemperatur",
+  "preinfusion": "Preinfusion",
+  "pressureProfile": "Druckprofil",
+  "defaultWater": "Standard-Wasserprofil",
+  "noDefaultWater": "Keines",
+  "waterAdd": "Wasserprofil hinzufügen",
+  "waterEditTitle": "Wasserprofil bearbeiten",
+  "waterDetail": "Wasserprofil",
+  "waterEmptyTitle": "Noch kein Wasserprofil",
+  "waterEmptyBody": "Erfasse die Härte deines Wassers.",
+  "waterInScaRange": "Im SCA-Bereich",
+  "waterOutsideSca": "Ausserhalb SCA",
+  "waterCheckFirst": "Wasser zuerst prüfen: {parameter} {value}, SCA {range}",
+  "@waterCheckFirst": {
+    "placeholders": {
+      "parameter": {
+        "type": "String"
+      },
+      "value": {
+        "type": "String"
+      },
+      "range": {
+        "type": "String"
+      }
+    }
+  },
+  "measuredOf": "{n} von {total} gemessen",
+  "@measuredOf": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "notMeasured": "nicht gemessen",
+  "scaRange": "SCA {range}",
+  "@scaRange": {
+    "placeholders": {
+      "range": {
+        "type": "String"
+      }
+    }
+  },
+  "paramTds": "TDS",
+  "paramHardness": "Härte",
+  "paramAlkalinity": "Alkalinität",
+  "paramPh": "pH",
+  "paramSodium": "Natrium",
+  "paramChlorine": "Chlor",
+  "hardnessUnitLabel": "Härteeinheit",
+  "hardnessRequired": "Härte (Pflicht)",
+  "exportData": "Export",
+  "importData": "Import",
+  "beansEmptyTitle": "Noch keine Bohnen",
+  "noPack": "Keine Packung",
+  "beanEditTitle": "Bohne bearbeiten",
+  "packForm": "Packung hinzufügen",
+  "packEditTitle": "Packung bearbeiten",
+  "fieldRoaster": "Röster",
+  "fieldRoastLevel": "Röstgrad",
+  "fieldKind": "Art",
+  "fieldLeadTime": "Lieferzeit",
+  "fieldMinStock": "Mindestbestand (optional)",
+  "fieldRoastDate": "Röstdatum",
+  "fieldWeight": "Gewicht",
+  "firstPack": "Erste Packung",
+  "unitDays": "Tage",
+  "roastLight": "Hell",
+  "roastMedium": "Mittel",
+  "roastMediumDark": "Mitteldunkel",
+  "roastDark": "Dunkel",
+  "kindEspressoBlend": "Espresso-Blend",
+  "kindFilter": "Filter",
+  "kindAllround": "Allround",
+  "dateRequired": "Datum eingeben",
+  "dateInvalid": "Datum wie {example} eingeben",
+  "@dateInvalid": {
+    "placeholders": {
+      "example": {
+        "type": "String"
+      }
+    }
+  },
+  "dateFuture": "Das Datum darf nicht in der Zukunft liegen",
+  "pickDate": "Datum wählen",
+  "roastedOn": "Geröstet am {date}",
+  "@roastedOn": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "packSizes": "{remaining} von {size}",
+  "@packSizes": {
+    "placeholders": {
+      "remaining": {
+        "type": "String"
+      },
+      "size": {
+        "type": "String"
+      }
+    }
+  },
+  "openPack": "Öffnen",
+  "openedOn": "Geöffnet am {date}",
+  "@openedOn": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "tileRemaining": "Restgramm",
+  "tileReadyDate": "Bereit-Datum",
+  "packsTitle": "Packungen",
+  "noPacksYet": "Noch keine Packungen.",
+  "beanNotFound": "Bohne nicht gefunden",
+  "editPack": "Packung bearbeiten",
+  "deletePackNamed": "Packung vom {date} löschen",
+  "@deletePackNamed": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "kindAndRoast": "{kind}, {roast}",
+  "@kindAndRoast": {
+    "placeholders": {
+      "kind": {
+        "type": "String"
+      },
+      "roast": {
+        "type": "String"
+      }
+    }
+  },
+  "beanImageLabel": "Bild von {name}",
+  "@beanImageLabel": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "brewsEmptyTitle": "Noch keine Brühungen",
+  "brewsEmptyBody": "Erfasse deinen ersten Shot.",
+  "methodEspresso": "Espresso",
+  "methodV60": "V60",
+  "methodChemex": "Chemex",
+  "methodKalita": "Kalita",
+  "methodAeropress": "AeroPress",
+  "methodBatch": "Batch",
+  "tasteSour": "Sauer",
+  "tasteBitter": "Bitter",
+  "tasteWeak": "Schwach",
+  "tasteBalanced": "Ausgewogen",
+  "brewMethod": "Methode",
+  "brewMachine": "Maschine",
+  "brewGrinder": "Mühle",
+  "brewPack": "Packung",
+  "brewGrind": "Mahlgrad",
+  "brewDose": "Dosis",
+  "brewPurge": "Spülmenge",
+  "brewYield": "Ausbeute",
+  "brewShotTime": "Shot-Zeit (s)",
+  "brewTime": "Shot-Zeit",
+  "brewRatio": "Verhältnis",
+  "brewWater": "Wasserprofil",
+  "brewTaste": "Geschmack",
+  "brewRating": "Bewertung",
+  "brewNote": "Notiz",
+  "brewStarted": "Gestartet",
+  "grindLower": "Mahlgrad verringern",
+  "grindRaise": "Mahlgrad erhöhen",
+  "timerStart": "Timer starten",
+  "timerStop": "Timer stoppen",
+  "timerElapsed": "Verstrichen {time}",
+  "@timerElapsed": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "ratingStars": "{n, plural, =1{1 Stern} other{{n} Sterne}}",
+  "@ratingStars": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "purgeBeanChange": "Vorab {grams} mahlen und verwerfen (Bohnenwechsel)",
+  "@purgeBeanChange": {
+    "placeholders": {
+      "grams": {
+        "type": "String"
+      }
+    }
+  },
+  "purgeIdle": "Vorab {grams} mahlen und verwerfen (Mühle lange ungenutzt)",
+  "@purgeIdle": {
+    "placeholders": {
+      "grams": {
+        "type": "String"
+      }
+    }
+  },
+  "needGrinder": "Zuerst eine Mühle anlegen",
+  "needMachine": "Zuerst eine Maschine anlegen",
+  "needPack": "Zuerst eine Packung anlegen",
+  "notEnoughBeans": "Nicht genug Bohnen in der Packung (Rest {n} g)",
+  "@notEnoughBeans": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "brewPackOption": "{bean}, geröstet {date}, noch {grams}",
+  "@brewPackOption": {
+    "placeholders": {
+      "bean": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      },
+      "grams": {
+        "type": "String"
+      }
+    }
+  },
+  "brewSelectionMissing": "Wähle Maschine, Mühle und Packung",
+  "brewNotFound": "Brühung nicht gefunden",
+  "recTitle": "Empfehlung",
+  "recReasonTitle": "Grund",
+  "recSourceTitle": "Quelle",
+  "recGrind": "Mahlgrad auf {setting}",
+  "@recGrind": {
+    "placeholders": {
+      "setting": {
+        "type": "String"
+      }
+    }
+  },
+  "recNoChange": "Keine Änderung",
+  "recScaleEnd": "Mahlgrad bleibt {setting}",
+  "@recScaleEnd": {
+    "placeholders": {
+      "setting": {
+        "type": "String"
+      }
+    }
+  },
+  "recScaleEndHint": "Skalenende",
+  "recRest": "{n, plural, =1{Packung noch ruhen lassen (noch 1 Tag)} other{Packung noch ruhen lassen (noch {n} Tage)}}",
+  "@recRest": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "recNoWater": "Wasserwerte erfassen",
+  "reasonNoWater": "Es ist kein Wasserprofil gewählt, das Wasser kann nicht geprüft werden.",
+  "reasonWaterOutside": "Wasser ausserhalb des SCA-Bereichs kommt vor jeder anderen Änderung.",
+  "reasonPackResting": "Die Packung hat die Espresso-Ruhezeit noch nicht erreicht.",
+  "reasonTimeTooShort": "Shot-Zeit {time} s liegt unter dem Zielfenster: {steps, plural, =1{1 Stufe} other{{steps} Stufen}} feiner mahlen.",
+  "@reasonTimeTooShort": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      },
+      "steps": {
+        "type": "int"
+      }
+    }
+  },
+  "reasonTimeTooLong": "Shot-Zeit {time} s liegt über dem Zielfenster: {steps, plural, =1{1 Stufe} other{{steps} Stufen}} gröber mahlen.",
+  "@reasonTimeTooLong": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      },
+      "steps": {
+        "type": "int"
+      }
+    }
+  },
+  "reasonTasteSour": "Sauer im Zielfenster: {steps, plural, =1{1 Stufe} other{{steps} Stufen}} feiner mahlen.",
+  "@reasonTasteSour": {
+    "placeholders": {
+      "steps": {
+        "type": "int"
+      }
+    }
+  },
+  "reasonTasteWeak": "Schwach im Zielfenster: {steps, plural, =1{1 Stufe} other{{steps} Stufen}} feiner mahlen.",
+  "@reasonTasteWeak": {
+    "placeholders": {
+      "steps": {
+        "type": "int"
+      }
+    }
+  },
+  "reasonTasteBitter": "Bitter im Zielfenster: {steps, plural, =1{1 Stufe} other{{steps} Stufen}} gröber mahlen.",
+  "@reasonTasteBitter": {
+    "placeholders": {
+      "steps": {
+        "type": "int"
+      }
+    }
+  },
+  "reasonBalanced": "Ausgewogen und im Zielfenster: alles beibehalten.",
+  "reasonScaleEnd": "Die Mühle ist am Ende der Skala; keine weitere Änderung möglich.",
+  "nextTry": "Nächster Versuch",
+  "filterMethodNote": "V60-Schema",
+  "filterNoPack": "Keine ruhezeit-fertige Packung",
+  "filterPackBackup": "{pack} (nachrangig)",
+  "@filterPackBackup": {
+    "placeholders": {
+      "pack": {
+        "type": "String"
+      }
+    }
+  },
+  "filterRatio": "Verhältnis",
+  "filterWaterTotal": "Wasser gesamt: {n} g",
+  "@filterWaterTotal": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "filterStart": "Start",
+  "filterNext": "Weiter",
+  "filterPourTo": "Giesse bis {n} g",
+  "@filterPourTo": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "filterAtTime": "bei {time}",
+  "@filterAtTime": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "filterStepBloom": "Bloom",
+  "filterStepPour": "Aufguss {n}",
+  "@filterStepPour": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "filterFinishTitle": "Abfluss",
+  "filterDrawdownField": "Abfluss-Zeit (s)",
+  "filterTimerLabel": "Timer {time}",
+  "@filterTimerLabel": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "brewDrawdown": "Abfluss-Zeit",
+  "brewWaterTotal": "Wasser gesamt",
+  "brewBloom": "Bloom",
+  "brewPours": "Aufgüsse",
+  "reasonPackRestingFilter": "Die Packung hat die Ruhezeit für Filter noch nicht erreicht.",
+  "reasonDrawdownTooShort": "Abfluss {time} s liegt unter dem Zielfenster: {steps, plural, =1{1 Stufe} other{{steps} Stufen}} feiner mahlen.",
+  "@reasonDrawdownTooShort": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      },
+      "steps": {
+        "type": "int"
+      }
+    }
+  },
+  "reasonDrawdownTooLong": "Abfluss {time} s liegt über dem Zielfenster: {steps, plural, =1{1 Stufe} other{{steps} Stufen}} gröber mahlen.",
+  "@reasonDrawdownTooLong": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      },
+      "steps": {
+        "type": "int"
+      }
+    }
+  }
+}
