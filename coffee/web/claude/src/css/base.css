@@ -1,0 +1,75 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body, #app {
+  min-height: 100vh;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-16);
+  line-height: var(--lh-body);
+  font-variant-numeric: var(--numeric);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  line-height: var(--lh-tight);
+  margin: 0;
+  font-weight: var(--fw-bold);
+}
+h1 { font-size: var(--fs-24); }
+h2 { font-size: var(--fs-20); }
+h3 { font-size: var(--fs-16); }
+p { margin: 0; }
+ul { margin: 0; padding: 0; }
+
+a { color: var(--accent); text-underline-offset: var(--space-1); }
+
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+
+.num { font-variant-numeric: var(--numeric); }
+
+.sr-only {
+  position: absolute;
+  width: var(--border-width);
+  height: var(--border-width);
+  margin: calc(var(--border-width) * -1);
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* LF10: 2 px ring, 2 px offset on every interactive element */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible,
+.is-focus {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
+
+@media (min-width: 600px) {
+  h1 { font-size: var(--fs-32); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0s !important;
+  }
+}
+
+[hidden] { display: none !important; }
