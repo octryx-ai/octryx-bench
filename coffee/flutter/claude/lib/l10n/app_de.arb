@@ -1,0 +1,229 @@
+{
+  "@@locale": "de",
+  "appTitle": "Kaffee-Begleiter",
+  "today": "Heute",
+  "beans": "Bohnen",
+  "brew": "Brühen",
+  "equipment": "Ausrüstung",
+  "more": "Mehr",
+  "water": "Wasser",
+  "care": "Pflege",
+  "settings": "Einstellungen",
+  "save": "Speichern",
+  "cancel": "Abbrechen",
+  "ready": "Bereit",
+  "restingDays": "{n, plural, =1{Ruht noch 1 Tag} other{Ruht noch {n} Tage}}",
+  "tooOld": "Zu alt",
+  "comingSoon": "Kommt bald",
+  "comingSoonBody": "Dieser Teil der App folgt in einer späteren Version.",
+  "retry": "Erneut versuchen",
+  "noImage": "Kein Bild",
+  "defaultWithoutSource": "Standardwert ohne Quelle",
+  "sourceLabel": "Quelle: {source} (abgerufen {date})",
+  "bannerInfo": "Info",
+  "bannerWarning": "Warnung",
+  "bannerError": "Fehler",
+  "styleGuide": "Style-Guide",
+  "navigation": "Navigation",
+  "add": "Hinzufügen",
+  "back": "Zurück",
+  "startFilter": "Filter starten",
+  "grinders": "Mühlen",
+  "machines": "Maschinen",
+  "beanDetail": "Bohnendetail",
+  "beanForm": "Bohne hinzufügen",
+  "brewForm": "Brühung erfassen",
+  "brewDetail": "Brühungsdetail",
+  "filterGuided": "Filter geführt",
+  "grinderForm": "Mühle hinzufügen",
+  "machineForm": "Maschine hinzufügen",
+  "waterForm": "Wasserprofil hinzufügen",
+  "openBeanDetail": "Bohne öffnen",
+  "openBrewDetail": "Brühung öffnen",
+  "emptyTitle": "Noch nichts da",
+  "emptyBody": "Lege deine erste Bohne an.",
+  "addBean": "Bohne hinzufügen",
+  "loading": "Lädt",
+  "errorBody": "Etwas ist schiefgelaufen.",
+  "stateDefault": "Standard",
+  "stateHover": "Hover",
+  "statePressed": "Gedrückt",
+  "stateFocus": "Fokus",
+  "stateDisabled": "Deaktiviert",
+  "stateLoading": "Lädt",
+  "stateSelected": "Ausgewählt",
+  "stateEmpty": "Leer",
+  "stateError": "Fehler",
+  "sgIntro": "Jede Komponente in jedem Zustand, im aktuellen Theme.",
+  "sgColors": "Farben",
+  "sgButtons": "Schaltflächen",
+  "sgCards": "Karten",
+  "sgFields": "Felder",
+  "sgChips": "Chips",
+  "sgBanners": "Banner",
+  "sgOther": "Weiteres",
+  "fieldLabel": "Bezeichnung",
+  "fieldHint": "Wert",
+  "fieldUnit": "g",
+  "fieldErrorText": "Wert zwischen 1 und 100 eingeben",
+  "bannerInfoText": "Deine Bohnen ruhen noch.",
+  "bannerWarningText": "Bohnen bald nachbestellen.",
+  "bannerErrorText": "Die Brühung konnte nicht gespeichert werden.",
+  "bannerAction": "Anzeigen",
+  "cardTitle": "Kartentitel",
+  "cardBody": "Karteninhalt in Papier-Anmutung.",
+  "ruleDemoKey": "Regel-Demo",
+  "aboutSources": "Über und Quellen",
+  "fieldName": "Name",
+  "edit": "Bearbeiten",
+  "deleteNamed": "{name} löschen",
+  "@deleteNamed": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "enterNumber": "Zahl eingeben",
+  "rangeError": "Wert zwischen {min} und {max} eingeben",
+  "@rangeError": {
+    "placeholders": {
+      "min": {
+        "type": "String"
+      },
+      "max": {
+        "type": "String"
+      }
+    }
+  },
+  "nameRequired": "Name eingeben",
+  "tooLong": "Höchstens {n} Zeichen verwenden",
+  "@tooLong": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "unitG": "g",
+  "unitS": "s",
+  "unitCelsius": "°C",
+  "unitPpm": "ppm",
+  "unitMgL": "mg/L",
+  "unitFh": "°fH",
+  "unitDh": "°dH",
+  "gramsValue": "{value} g",
+  "@gramsValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "secondsValue": "{value} s",
+  "@secondsValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "celsiusValue": "{value} °C",
+  "@celsiusValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "daysCount": "{n, plural, =1{1 Tag} other{{n} Tage}}",
+  "@daysCount": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "grinderAdd": "Mühle hinzufügen",
+  "grinderEditTitle": "Mühle bearbeiten",
+  "grindersEmptyTitle": "Noch keine Mühle",
+  "grindersEmptyBody": "Lege deine Mühle mit Skala und Totraum an.",
+  "scaleMin": "Skala Minimum",
+  "scaleMax": "Skala Maximum",
+  "scaleStep": "Skala Schritt",
+  "stepPositive": "Schritt muss grösser als 0 sein",
+  "scaleMaxAboveMin": "Maximum muss grösser als das Minimum sein",
+  "finerDirection": "Richtung für feiner",
+  "finerDown": "Abwärts (kleiner ist feiner)",
+  "finerUp": "Aufwärts (grösser ist feiner)",
+  "deadSpace": "Totraum",
+  "checkGrindSetting": "Mahlgrad prüfen",
+  "grindSettingNotOnScale": "Wert liegt nicht auf der Skala der Mühle (Schritt {step})",
+  "@grindSettingNotOnScale": {
+    "placeholders": {
+      "step": {
+        "type": "String"
+      }
+    }
+  },
+  "machineAdd": "Maschine hinzufügen",
+  "machineEditTitle": "Maschine bearbeiten",
+  "machinesEmptyTitle": "Noch keine Maschine",
+  "machinesEmptyBody": "Lege deine Maschine mit Einstellungen an.",
+  "brewTemp": "Brühtemperatur",
+  "preinfusion": "Preinfusion",
+  "pressureProfile": "Druckprofil",
+  "defaultWater": "Standard-Wasserprofil",
+  "noDefaultWater": "Keines",
+  "waterAdd": "Wasserprofil hinzufügen",
+  "waterEditTitle": "Wasserprofil bearbeiten",
+  "waterDetail": "Wasserprofil",
+  "waterEmptyTitle": "Noch kein Wasserprofil",
+  "waterEmptyBody": "Erfasse die Härte deines Wassers.",
+  "waterInScaRange": "Im SCA-Bereich",
+  "waterOutsideSca": "Ausserhalb SCA",
+  "waterCheckFirst": "Wasser zuerst prüfen: {parameter} {value}, SCA {range}",
+  "@waterCheckFirst": {
+    "placeholders": {
+      "parameter": {
+        "type": "String"
+      },
+      "value": {
+        "type": "String"
+      },
+      "range": {
+        "type": "String"
+      }
+    }
+  },
+  "measuredOf": "{n} von {total} gemessen",
+  "@measuredOf": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "notMeasured": "nicht gemessen",
+  "scaRange": "SCA {range}",
+  "@scaRange": {
+    "placeholders": {
+      "range": {
+        "type": "String"
+      }
+    }
+  },
+  "paramTds": "TDS",
+  "paramHardness": "Härte",
+  "paramAlkalinity": "Alkalinität",
+  "paramPh": "pH",
+  "paramSodium": "Natrium",
+  "paramChlorine": "Chlor",
+  "hardnessUnitLabel": "Härteeinheit",
+  "hardnessRequired": "Härte (Pflicht)",
+  "exportData": "Export",
+  "importData": "Import"
+}

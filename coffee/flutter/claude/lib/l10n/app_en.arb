@@ -1,0 +1,246 @@
+{
+  "@@locale": "en",
+  "appTitle": "Coffee Companion",
+  "today": "Today",
+  "beans": "Beans",
+  "brew": "Brew",
+  "equipment": "Equipment",
+  "more": "More",
+  "water": "Water",
+  "care": "Care",
+  "settings": "Settings",
+  "save": "Save",
+  "cancel": "Cancel",
+  "ready": "Ready",
+  "restingDays": "{n, plural, =1{Resting, 1 day left} other{Resting, {n} days left}}",
+  "@restingDays": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "tooOld": "Too old",
+  "comingSoon": "Coming soon",
+  "comingSoonBody": "This part of the app arrives in a later release.",
+  "retry": "Try again",
+  "noImage": "No image",
+  "defaultWithoutSource": "Default without source",
+  "sourceLabel": "Source: {source} (retrieved {date})",
+  "@sourceLabel": {
+    "placeholders": {
+      "source": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "bannerInfo": "Info",
+  "bannerWarning": "Warning",
+  "bannerError": "Error",
+  "styleGuide": "Style guide",
+  "navigation": "Navigation",
+  "add": "Add",
+  "back": "Back",
+  "startFilter": "Start filter",
+  "grinders": "Grinders",
+  "machines": "Machines",
+  "beanDetail": "Bean detail",
+  "beanForm": "Add bean",
+  "brewForm": "Log a brew",
+  "brewDetail": "Brew detail",
+  "filterGuided": "Guided filter",
+  "grinderForm": "Add grinder",
+  "machineForm": "Add machine",
+  "waterForm": "Add water profile",
+  "openBeanDetail": "Open a bean",
+  "openBrewDetail": "Open a brew",
+  "emptyTitle": "Nothing here yet",
+  "emptyBody": "Add your first bean.",
+  "addBean": "Add bean",
+  "loading": "Loading",
+  "errorBody": "Something went wrong.",
+  "stateDefault": "Default",
+  "stateHover": "Hover",
+  "statePressed": "Pressed",
+  "stateFocus": "Focus",
+  "stateDisabled": "Disabled",
+  "stateLoading": "Loading",
+  "stateSelected": "Selected",
+  "stateEmpty": "Empty",
+  "stateError": "Error",
+  "sgIntro": "Every component in every state, in the current theme.",
+  "sgColors": "Colours",
+  "sgButtons": "Buttons",
+  "sgCards": "Cards",
+  "sgFields": "Fields",
+  "sgChips": "Chips",
+  "sgBanners": "Banners",
+  "sgOther": "Other",
+  "fieldLabel": "Label",
+  "fieldHint": "Value",
+  "fieldUnit": "g",
+  "fieldErrorText": "Enter a value between 1 and 100",
+  "bannerInfoText": "Your beans are resting.",
+  "bannerWarningText": "Order beans soon.",
+  "bannerErrorText": "Could not save the brew.",
+  "bannerAction": "Show",
+  "cardTitle": "Card title",
+  "cardBody": "Card content in paper look.",
+  "ruleDemoKey": "Rule demo",
+  "aboutSources": "About and sources",
+  "fieldName": "Name",
+  "edit": "Edit",
+  "deleteNamed": "Delete {name}",
+  "@deleteNamed": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "enterNumber": "Enter a number",
+  "rangeError": "Enter a value between {min} and {max}",
+  "@rangeError": {
+    "placeholders": {
+      "min": {
+        "type": "String"
+      },
+      "max": {
+        "type": "String"
+      }
+    }
+  },
+  "nameRequired": "Enter a name",
+  "tooLong": "Use at most {n} characters",
+  "@tooLong": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "unitG": "g",
+  "unitS": "s",
+  "unitCelsius": "°C",
+  "unitPpm": "ppm",
+  "unitMgL": "mg/L",
+  "unitFh": "°fH",
+  "unitDh": "°dH",
+  "gramsValue": "{value} g",
+  "@gramsValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "secondsValue": "{value} s",
+  "@secondsValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "celsiusValue": "{value} °C",
+  "@celsiusValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "daysCount": "{n, plural, =1{1 day} other{{n} days}}",
+  "@daysCount": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "grinderAdd": "Add grinder",
+  "grinderEditTitle": "Edit grinder",
+  "grindersEmptyTitle": "No grinder yet",
+  "grindersEmptyBody": "Add your grinder with scale and dead space.",
+  "scaleMin": "Scale minimum",
+  "scaleMax": "Scale maximum",
+  "scaleStep": "Scale step",
+  "stepPositive": "Step must be greater than 0",
+  "scaleMaxAboveMin": "Maximum must be greater than the minimum",
+  "finerDirection": "Finer grind direction",
+  "finerDown": "Down (lower is finer)",
+  "finerUp": "Up (higher is finer)",
+  "deadSpace": "Dead space",
+  "checkGrindSetting": "Check grind setting",
+  "grindSettingNotOnScale": "Value is not on the grinder's scale (step {step})",
+  "@grindSettingNotOnScale": {
+    "placeholders": {
+      "step": {
+        "type": "String"
+      }
+    }
+  },
+  "machineAdd": "Add machine",
+  "machineEditTitle": "Edit machine",
+  "machinesEmptyTitle": "No machine yet",
+  "machinesEmptyBody": "Add your machine with its settings.",
+  "brewTemp": "Brew temperature",
+  "preinfusion": "Pre-infusion",
+  "pressureProfile": "Pressure profile",
+  "defaultWater": "Default water profile",
+  "noDefaultWater": "None",
+  "waterAdd": "Add water profile",
+  "waterEditTitle": "Edit water profile",
+  "waterDetail": "Water profile",
+  "waterEmptyTitle": "No water profile yet",
+  "waterEmptyBody": "Enter your water's hardness.",
+  "waterInScaRange": "In SCA range",
+  "waterOutsideSca": "Outside SCA",
+  "waterCheckFirst": "Check water first: {parameter} {value}, SCA {range}",
+  "@waterCheckFirst": {
+    "placeholders": {
+      "parameter": {
+        "type": "String"
+      },
+      "value": {
+        "type": "String"
+      },
+      "range": {
+        "type": "String"
+      }
+    }
+  },
+  "measuredOf": "{n} of {total} measured",
+  "@measuredOf": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "notMeasured": "not measured",
+  "scaRange": "SCA {range}",
+  "@scaRange": {
+    "placeholders": {
+      "range": {
+        "type": "String"
+      }
+    }
+  },
+  "paramTds": "TDS",
+  "paramHardness": "Hardness",
+  "paramAlkalinity": "Alkalinity",
+  "paramPh": "pH",
+  "paramSodium": "Sodium",
+  "paramChlorine": "Chlorine",
+  "hardnessUnitLabel": "Hardness unit",
+  "hardnessRequired": "Hardness (required)",
+  "exportData": "Export",
+  "importData": "Import"
+}
