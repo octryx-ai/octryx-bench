@@ -1,0 +1,298 @@
+{
+  "cases": [
+    {
+      "id": "flutter-bug",
+      "stack": "flutter",
+      "kind": "bug",
+      "size": "S",
+      "workflow_key": "bug-fix-reproduction",
+      "app": "coffee/flutter/claude",
+      "item": {
+        "issue_type": "bug",
+        "title": "Mahlgrad startet bei 0.0 statt 15",
+        "description": "Steps:\n1. Open the app (web), Equipment, add grinder M1 (scale 1-30, step 0.5, dead space 2.5 g), save.\n2. Brew, new espresso, choose grinder M1.\nExpected: the grind setting field starts at 15 (the decided default).\nActual: the grind setting field starts at 0.0.\nEnvironment: Coffee app (coffee/flutter/claude), Flutter web build in Chrome, on the case base branch."
+      },
+      "split": "train",
+      "base_branch": "base/flutter-bug-env",
+      "base_sha": "3acffea520325fe14fd42e857e3b9c2cca880ff7"
+    },
+    {
+      "id": "flutter-story",
+      "stack": "flutter",
+      "kind": "story",
+      "size": "M",
+      "workflow_key": "epic-delivery",
+      "app": "coffee/flutter/claude",
+      "item": {
+        "issue_type": "task",
+        "title": "Onboarding S2: Infoseiten mit Fortschritt und Navigation",
+        "description": "Der Nutzer sieht die Seiten Willkommen und Funktionen mit Fortschrittsanzeige und kann vor- und zurücknavigieren.\n\nAcceptance criteria:\n- 1. Seite 1 zeigt „Willkommen“ / „Welcome“ mit 160-dp-Kopf mit Verlauf und Icon und primärer Schaltfläche „Weiter“ / „Next“; es gibt auf Seite 1 keine „Zurück“-Schaltfläche.\n- 2. Seite 2 nennt genau drei Punkte: Brühungen erfassen; Bohnen und Ruhezeit führen; Empfehlung zur Verbesserung (DE und EN).\n- 3. Fortschrittstext auf Seite k lautet „k von 4“ / „k of 4“; Seite 2 zeigt „2 von 4“ mit Punkt-Füllanteil 50 %, Seite 4 „4 von 4“ mit 100 %.\n- 4. „Zurück“ / „Back“ ist ab Seite 2 sichtbar und führt zur vorherigen Seite.\n- 5. „Weiter“ auf Seite 2 führt zu Seite 3; „Überspringen“ auf Seite 2 setzt das Flag und zeigt Heute.\n- 6. Widget-Tests je Seite (Texte, Fortschritt, Schaltflächen); Playwright-Prüfung des Seitenwechsels; README und CHANGELOG aktualisiert.\n\nSpecification sections:\n- 4 Regeln und Formeln, R12 (SPEC-ONBOARDING.md)\n- UI und Design (SPEC-UI.md): Onboarding\n\nBuilds on: Onboarding S1: Erststart-Flag und Routing"
+      },
+      "timeout_min": 75,
+      "split": "test",
+      "base_branch": "base/flutter-story-env",
+      "base_sha": "813fb6daed2a5c7992b7869081f91fc79b2da50d"
+    },
+    {
+      "id": "python-bug",
+      "stack": "python",
+      "kind": "bug",
+      "size": "S",
+      "workflow_key": "bug-fix-reproduction",
+      "app": "e2e/python",
+      "item": {
+        "issue_type": "bug",
+        "title": "splitbill: shares do not add up to the total",
+        "description": "Steps:\n1. In e2e/python, run `python3 -m splitbill 10.00 3`.\nExpected: 3.34, 3.33, 3.33 (the shares add up to 10.00; the leftover cent goes to the first person, as the README says).\nActual: 3.33, 3.33, 3.33 (9.99 in total, one cent lost).\nEnvironment: app e2e/python (splitbill), Python 3.9+, on the case base branch."
+      },
+      "split": "test",
+      "base_branch": "base/python-bug-env",
+      "base_sha": "17755f63a635572096e528acce711bd6f7a55ee0"
+    },
+    {
+      "id": "python-story",
+      "stack": "python",
+      "kind": "story",
+      "size": "M",
+      "workflow_key": "epic-delivery",
+      "app": "e2e/python",
+      "item": {
+        "issue_type": "task",
+        "title": "splitbill: optional tip in percent",
+        "description": "As a user I can add a tip in percent before the bill is split.\n\nAcceptance criteria:\n- 1. `python3 -m splitbill 10.00 3 --tip 15` splits 11.50 (the tip is added to the total and rounded half up to whole cents).\n- 2. The tip is a whole number from 0 to 100; anything else prints an error and exits with code 2.\n- 3. Without `--tip` the output is unchanged.\n- 4. Unit tests for the tip calculation and its validation; the CLI test (tests/test_cli.py) covers one tip case.\n- 5. README and CHANGELOG updated.\n\nApp: e2e/python (splitbill). Keep the leftover-cent rule of the README."
+      },
+      "split": "test",
+      "base_branch": "base/python-story-env",
+      "base_sha": "2e1f003fa5549f576ac8db6a1fa77a2d59b9bcc3"
+    },
+    {
+      "id": "node-bug",
+      "stack": "node",
+      "kind": "bug",
+      "size": "S",
+      "workflow_key": "bug-fix-reproduction",
+      "app": "e2e/node",
+      "item": {
+        "issue_type": "bug",
+        "title": "booklist: page 1 skips the first books",
+        "description": "Steps:\n1. In e2e/node, run `node src/cli.js --page 1 --size 2`.\nExpected: `1. Dune (1965)` and `2. Emma (1815)` (pages are numbered from 1, as the README says).\nActual: `1. Ulysses (1922)` and `2. Beloved (1987)` (the first page is skipped).\nEnvironment: app e2e/node (booklist), Node 20+, on the case base branch."
+      },
+      "split": "train",
+      "base_branch": "base/node-bug-env",
+      "base_sha": "d3f0114c94a1fc545842ceb441fe823311e4195b"
+    },
+    {
+      "id": "node-story",
+      "stack": "node",
+      "kind": "story",
+      "size": "M",
+      "workflow_key": "epic-delivery",
+      "app": "e2e/node",
+      "item": {
+        "issue_type": "task",
+        "title": "booklist: sort by title or year",
+        "description": "As a user I can sort the list before it is paged.\n\nAcceptance criteria:\n- 1. `--sort title` sorts by title A-Z, `--sort year` by year (oldest first); `--desc` reverses the order.\n- 2. Without `--sort` the file order stays.\n- 3. An unknown sort key prints an error and exits with code 2.\n- 4. Sorting happens before paging, so page 1 holds the first books of the sorted list.\n- 5. Unit tests for sorting and the new options; the CLI test (test/cli.test.js) covers one sorted case.\n- 6. README and CHANGELOG updated.\n\nApp: e2e/node (booklist), no new dependencies."
+      },
+      "split": "train",
+      "base_branch": "base/node-story-env",
+      "base_sha": "f09d32729ffd323003835bf3fd2a4ee7db0f2aa3"
+    },
+    {
+      "id": "bug-cof-73",
+      "stack": "flutter",
+      "kind": "bug",
+      "size": "S",
+      "workflow_key": "bug-fix-reproduction",
+      "app": "coffee/flutter/claude",
+      "item": {
+        "issue_type": "bug",
+        "title": "Eingetragene Bohnen/Mühlen sind nach Neuladen weg",
+        "description": "Steps:\n1. Open the app (web), Equipment, add grinder M1 (scale 1-30, step 1, dead space 2.5 g), save: M1 is listed.\n2. Reload the page, open Equipment again.\nExpected: grinder M1 is still listed (SPEC decision 2: local storage with drift/SQLite, offline first).\nActual: \"No grinder yet\"; beans and every other entry are gone after a reload as well.\nEnvironment: Coffee app (coffee/flutter/claude), Flutter web build in Chrome, on the case base branch."
+      },
+      "label": "regression",
+      "split": "train",
+      "base_branch": "base/bug-cof-73-env",
+      "base_sha": "e69cb2fcd77062113072bf2c2e28eef0a7ec69b3"
+    },
+    {
+      "id": "story-cof-78",
+      "stack": "flutter",
+      "kind": "story",
+      "size": "M",
+      "workflow_key": "epic-delivery",
+      "app": "coffee/flutter/claude",
+      "item": {
+        "issue_type": "task",
+        "title": "Onboarding S4: Bohne im Onboarding anlegen und Abschluss",
+        "description": "Der Nutzer kann auf Seite 4 seine erste Bohne anlegen oder überspringen, das Onboarding mit „Los geht’s“ abschliessen und die Bohne danach in Bohnenliste und Heute sehen.\n\nAcceptance criteria:\n- 1. Seite 4 nutzt die bestehenden Felder und Validierungen des Bohnenformulars (Pflichtfelder Name, Röster, Röstgrad, Art); es gibt keine Packung.\n- 2. Nach erfolgreichem Speichern von „Bohne 1“ (medium, allround) bleibt Seite 4 stehen, zeigt „Angelegt: Bohne 1“ / „Created: Bohne 1“ und die primäre Aktion „Los geht’s“ / „Let’s go“ (kein automatischer Wechsel).\n- 3. „Los geht’s“ setzt das Flag auf true und zeigt Heute; „Später“ auf Seite 4 schliesst das Onboarding ab wie „Los geht’s“ ohne Datensatz.\n- 4. Schlägt das Schreiben des Flags beim Abschluss fehl, bleibt Seite 4, das Banner „Einstellung konnte nicht gespeichert werden“ mit „Erneut versuchen“ erscheint, und Heute erst nach erfolgreichem Wiederholen.\n- 5. Bohnenliste zeigt „Bohne 1“ ohne Chip; Heute zeigt „Bohne 1“ in der Region „Ohne Packung“ / „No pack yet“ mit Hinweis „Packung hinzufügen“ / „Add a pack“, nicht unter „Jetzt trinkbereit\"; Heute zeigt den Leer-Zustand nur, wenn keine Bohne existiert.\n- 6. Zurückgehen auf die gespeicherte Seite 4 legt nichts neu an; pro Lauf höchstens eine Bohne.\n- 7. Playwright „Abschliessen mit Mühle und Bohne“ (Ausrüstung zeigt „M1“, Bohnenliste „Bohne 1“, Heute Region „Ohne Packung“) und „Reload zeigt es nicht erneut“; Widget-Tests der Seite; README und CHANGELOG aktualisiert.\n\nSpecification sections:\n- 2 Nutzer und Use Cases (UC10)\n- 4 Regeln und Formeln, R12 (SPEC-ONBOARDING.md)\n- 5 Defaults, Grenzen, Reihenfolge, leere Daten, Fehler (Bohnenformular)\n- 7 Nicht-funktionale Anforderungen (Tests)\n\nBuilds on: Onboarding S3: Mühle im Onboarding anlegen"
+      },
+      "timeout_min": 75,
+      "label": "regression",
+      "split": "train",
+      "base_branch": "base/story-cof-78-env",
+      "base_sha": "1c52ea41e47e97b76ee4053a742c924d765976f5"
+    },
+    {
+      "id": "story-cof-77",
+      "stack": "flutter",
+      "kind": "story",
+      "size": "M",
+      "workflow_key": "epic-delivery",
+      "app": "coffee/flutter/claude",
+      "item": {
+        "issue_type": "task",
+        "title": "Onboarding S3: Mühle im Onboarding anlegen",
+        "description": "Der Nutzer kann auf Seite 3 seine erste Mühle anlegen oder mit „Später“ überspringen, und die Mühle erscheint danach unter Ausrüstung.\n\nAcceptance criteria:\n- 1. Seite 3 nutzt die bestehenden Felder und Validierungen des Mühlenformulars (Abschnitt 5, R9); Pflichtfeldfehler erscheinen als Zeile unter dem Feld wie im normalen Formular.\n- 2. Erfolgreiches Speichern von Mühle „M1“ (Skala 1–30, Schritt 0.5, Totraum 2.5 g) wechselt automatisch zu Seite 4.\n- 3. „Später“ / „Later“ auf Seite 3 legt keinen Datensatz an und führt zu Seite 4.\n- 4. Zurückgehen auf die gespeicherte Seite 3 zeigt „Angelegt: M1“ / „Created: M1“ und legt nichts neu an; pro Onboarding-Lauf höchstens eine Mühle.\n- 5. Nach Abschluss zeigt Ausrüstung die Karte „M1“ mit „2.5 g“; nach Überspringen mitten im Ablauf bleibt eine bereits gespeicherte Mühle erhalten und wird bei erneutem Durchlauf nicht doppelt angelegt (laufende Sitzung).\n- 6. Es werden keine Standardwerte für Maschine oder Wasserprofil gesetzt.\n- 7. Widget-Tests der Seite (Validierung, Speichern, Später, Angelegt-Anzeige); Playwright-Teil „Mühle sichtbar unter Ausrüstung“; README und CHANGELOG aktualisiert.\n\nSpecification sections:\n- 4 Regeln und Formeln, R12 (SPEC-ONBOARDING.md)\n- 5 Defaults, Grenzen, Reihenfolge, leere Daten, Fehler (R9, Mühlenformular)\n- UI und Design (SPEC-UI.md): Onboarding\n\nBuilds on: Onboarding S2: Infoseiten mit Fortschritt und Navigation"
+      },
+      "timeout_min": 75,
+      "label": "regression",
+      "split": "train",
+      "base_branch": "base/story-cof-77-env",
+      "base_sha": "18f6510030cbfb092b7a62b630181c55f5a5f467"
+    },
+    {
+      "id": "story-cof-75",
+      "stack": "flutter",
+      "kind": "story",
+      "size": "M",
+      "workflow_key": "epic-delivery",
+      "app": "coffee/flutter/claude",
+      "item": {
+        "issue_type": "task",
+        "title": "Onboarding S1: Erststart-Flag und Routing",
+        "description": "Beim Start entscheidet das persistente Flag onboardingDone, ob das Onboarding oder die Shell mit Heute erscheint, und „Überspringen“ schliesst es dauerhaft ab.\n\nAcceptance criteria:\n- 1. Flag fehlt oder false → Start zeigt Onboarding Seite 1 (Titel „Willkommen“ / „Welcome“), auch wenn schon Daten existieren; Flag true → Shell mit Ziel Heute.\n- 2. Lesefehler beim Flag → Heute (onboardingDone gilt als true), keine Schleife.\n- 3. Das Onboarding ist Vollbild ohne Bottom-Bar, Rail oder Seitenleiste, in einer zentrierten Spalte max. 480 dp; bei 390 dp Breite nichts abgeschnitten.\n- 4. „Überspringen“ (Textschaltfläche, ohne Rückfrage) auf jeder Seite setzt das Flag auf true und zeigt Heute; ein zweiter Start zeigt Heute; ein Reload (Chrome, localStorage über shared_preferences) zeigt das Onboarding nicht erneut.\n- 5. Das Flag wird nie vor Abschluss oder Überspringen gesetzt: App auf Seite 3 geschlossen → Flag false, nächster Start Seite 1.\n- 6. Schlägt das Schreiben des Flags fehl, bleibt die Seite stehen und ein Banner „Einstellung konnte nicht gespeichert werden“ / „Setting could not be saved“ mit Aktion „Erneut versuchen“ / „Retry“ erscheint; Heute erst nach erfolgreichem Schreiben.\n- 7. Die Systemzurück-Geste auf Seite 1 beendet die App nicht; Touch-Ziele ≥ 48 dp, Fokusring 2 dp, Semantics-Labels; Texte DE/EN in den ARB-Dateien.\n- 8. Tests: Unit-Tests der Flag-Logik (neu, erledigt, übersprungen, Lesefehler, Schreibfehler); Widget-Test für Routing; Playwright „Überspringen“ und „Reload zeigt es nicht erneut\"; README und CHANGELOG aktualisiert.\n\nSpecification sections:\n- 2 Nutzer und Use Cases (UC10)\n- 3 Domänenmodell (Persistenz-Einschränkung)\n- 4 Regeln und Formeln, R12 (SPEC-ONBOARDING.md)\n- 7 Nicht-funktionale Anforderungen (Tests)\n- UI und Design (SPEC-UI.md): Onboarding, LF13"
+      },
+      "timeout_min": 75,
+      "label": "regression",
+      "split": "train",
+      "base_branch": "base/story-cof-75-env",
+      "base_sha": "e507a9208edd34f3becd07f5bbbf85af498187b2"
+    },
+    {
+      "id": "story-cof-45",
+      "stack": "flutter",
+      "kind": "story",
+      "size": "M",
+      "workflow_key": "epic-delivery",
+      "app": "coffee/flutter/claude",
+      "item": {
+        "issue_type": "Story",
+        "title": "Kaffee-Begleiter S1: Design-System und App-Shell",
+        "description": "Projekt-Grundgerüst mit Tokens, Basiskomponenten, Style-Guide-Seite, Navigation zu allen Screens, Lokalisierung, Datenbank-Grundlage und Zeilenprüfung.\n\nAcceptance criteria:\n- 1. `tool/check_lines.dart`: Exit 0 wenn alle lib/-Dateien ≤ 300 und test/-Dateien ≤ 500 Zeilen; eine Datei mit 301 Zeilen in lib/ → Exit 1 mit Ausgabe `<Pfad>: 301`; *.g.dart, *.freezed.dart und lib/l10n/app_localizations*.dart sind ausgenommen.\n- 2. environment.json-Gate führt `dart format --set-exit-if-changed`, `flutter analyze` und `tool/check_lines.dart` aus und alle enden mit Exit 0.\n- 3. Eine Tokens-Datei enthält alle Farben/Grössen aus 'UI und Design' (primary #8A4B2A, success #36703F, warning #8A5A00 hell); ein Test prüft Kontrast ≥ 4.5:1 für success/warning/error auf surface und surfaceVariant (hell und dunkel); ausserhalb der Tokens kein Farb- oder Grössenliteral.\n- 4. Style-Guide-Seite zeigt Button (default, hover, pressed, disabled, loading), Karte (default, hover, selected, disabled, empty, loading, error), Feld (default, focus, error, disabled), Chip (Bereit, Ruht noch X Tage, Zu alt) und Banner (Info, Warnung, Fehler) in jedem Zustand.\n- 5. Phone (390 dp): Bottom-Bar mit 5 Zielen Heute, Bohnen, Brühen, Ausrüstung, Mehr, kein horizontales Scrollen; Tablet 600–1023 dp: Navigation-Rail mit 5 Zielen; Desktop ≥ 1024 dp: feste Seitenleiste 240 dp mit 7 Einträgen (Heute, Bohnen, Brühen, Ausrüstung, Wasser, Pflege, Einstellungen).\n- 6. Jeder Screen der Spezifikation ist erreichbar; Screens späterer Stories zeigen den Hinweis „Kommt bald“ / „Coming soon\"; Hintergrund und Seitenleiste füllen den Viewport bis zum unteren Rand (LF1).\n- 7. Sprache folgt der Systemsprache (DE/EN, Fallback EN): „Heute“/„Today“, „Speichern“/„Save“; Datum DE 16.11.2026, EN 16 Nov 2026; Dezimalpunkt.\n- 8. Hell/Dunkel nach System; Dunkel: Karten mit 1-dp-Rand statt Schatten.\n- 9. Basis-Datenmodell drift/SQLite mit id (UUIDv4), createdAt, updatedAt, deletedAt; Löschen setzt deletedAt und updatedAt = deletedAt (Unit-Test).\n- 10. Rule-Asset-Loader liest assets/*.json mit key, value, source, retrieved; Eintrag mit source \"none\" wird als „Standardwert ohne Quelle“ angezeigt.\n- 11. README.md und CHANGELOG.md aktualisiert; Playwright-Smoke in Chrome lädt die App.\n\nSpecification sections:\n- 7 Nicht-funktionale Anforderungen\n- UI und Design\n- 6 Schnittstellen und Formate (Lokalisierung, Regel-Assets)\n- 3 Domänenmodell (Basisfelder, Löschen)"
+      },
+      "timeout_min": 75,
+      "label": "regression",
+      "split": "test",
+      "base_branch": "base/story-cof-45-env",
+      "base_sha": "e36fd0fa7262ac7ff1624e9724b099e1ed2a7722"
+    },
+    {
+      "id": "story-cof-46",
+      "stack": "flutter",
+      "kind": "story",
+      "size": "M",
+      "workflow_key": "epic-delivery",
+      "app": "coffee/flutter/claude",
+      "item": {
+        "issue_type": "Story",
+        "title": "Kaffee-Begleiter S2: Ausrüstung und Wasserprofile",
+        "description": "Mühlen, Maschinen und Wasserprofile erfassen und gegen den SCA-Bereich prüfen.\n\nAcceptance criteria:\n- 1. UC1: Mühle „M1“ (Skala 1–30, Schritt 0.5, Totraum 2.5 g) anlegen → Karte „M1“ zeigt „2.5 g\"; Mühlenkarte zeigt Bogen mit Min-/Max-Label.\n- 2. Mahlgrad ausserhalb der Skala oder nicht Vielfaches von scaleStep → Fehler „Wert liegt nicht auf der Skala der Mühle (Schritt 0.5)\" / EN „Value is not on the grinder's scale (step 0.5)\".\n- 3. Maschine mit Brühtemperatur °C, Preinfusion s, Druckprofil und Standard-Wasserprofil anlegen; Maschinenkarte zeigt Ring mit Tage-Anzeige.\n- 4. Leere Zustände für Mühlen („Noch keine Mühle\"), Maschinen und Wasser („Noch kein Wasserprofil\") mit Icon, Titel, Satz, Aktion in DE/EN.\n- 5. R1: 15 °fH → 150.0 ppm; 8.4 °dH → 149.9 ppm; 150 ppm → 15.0 °fH und 8.4 °dH (Unit-Test).\n- 6. R2: 30 °fH = 300 ppm → „Ausserhalb SCA\" mit „Wasser zuerst prüfen: Härte 300 ppm, SCA 50–175 ppm\"; 15 °fH, übrige null → „Im SCA-Bereich\" (1 von 6 gemessen).\n- 7. UC6: Wasser 30 °fH → Status „Ausserhalb SCA\", nach Wechsel der Einheit auf ppm Anzeige „300 ppm\"; Balken je Parameter mit SCA-Bereich, ausserhalb in error.\n- 8. Wasser-Formular validiert Bereiche („Wert zwischen {min} und {max} eingeben\") und Name leer („Name eingeben\"); optionale Felder leer = „nicht gemessen\".\n- 9. Einstellungen: Härteeinheit fH/dH/ppm, gespeichert als ppm.\n- 10. Gelöschte Mühle/Maschine/Wasserprofil verschwindet aus Listen (deletedAt).\n- 11. README.md und CHANGELOG.md aktualisiert.\n\nSpecification sections:\n- 3 Domänenmodell (Grinder, Machine, WaterProfile, Setting)\n- 4 Regeln und Formeln R1, R2\n- 5 Defaults, Grenzen, Reihenfolge, leere Daten, Fehler\n- UI und Design (Ausrüstung, Wasser, Wasser-Formular, Einstellungen)\n\nBuilds on: Kaffee-Begleiter S1: Design-System und App-Shell"
+      },
+      "timeout_min": 75,
+      "label": "regression",
+      "split": "train",
+      "base_branch": "base/story-cof-46-env",
+      "base_sha": "a8aedc317fd936eccfab4c5fe98a8ef2b3657b4a"
+    },
+    {
+      "id": "story-cof-47",
+      "stack": "flutter",
+      "kind": "story",
+      "size": "M",
+      "workflow_key": "epic-delivery",
+      "app": "coffee/flutter/claude",
+      "item": {
+        "issue_type": "Story",
+        "title": "Kaffee-Begleiter S3: Bohnen, Packungen und Ruhezeit",
+        "description": "Bohnen und Packungen erfassen und die Trinkbereitschaft nach Ruhezeit sehen.\n\nAcceptance criteria:\n- 1. UC2: Bohne medium, Röstdatum heute − 12 Tage → Chip „Bereit\".\n- 2. R3: Röstdatum 2026-11-01, medium: Filter bereit 2026-11-06, Espresso bereit 2026-11-11, zu alt ab 2026-12-16; Tabelle light 7/5/4/3 Filter, 14/10/7/5 Espresso (Unit-Test).\n- 3. Chip „Ruht noch {n} Tage\" / „Resting, {n} days left\" und „Zu alt\" bei heute ≥ roastDate + 45.\n- 4. Bohnenliste sortiert nach frühestem readyDate aufsteigend; mehrere Packungen derselben Bohne und mehrere Röster möglich.\n- 5. Bohnenkarte: Verlauf aus fnv1a32(lowercase(name)), H = 15 + mod 36 (Unit-Test mit festem Wert), Bohnen-Icon, Röstgrad-Punkte (light 1, medium 2, mediumDark 3, dark 4); Nachbarkarten unterscheiden sich im Farbton.\n- 6. Formular-Validierung: Name 1–60 Zeichen, sizeG 50–5000, Fehler pro Feld; Leerzustand „Noch keine Bohnen\".\n- 7. Bohnendetail zeigt Packungsliste, Kacheln (Restgramm, Bereit-Datum), Aktionen „Packung hinzufügen\" und „Öffnen\" (setzt openedAt).\n- 8. Kind espressoBlend/allround nutzt Espresso-Ruhezeit, filter die Filter-Ruhezeit.\n- 9. README.md und CHANGELOG.md aktualisiert.\n\nSpecification sections:\n- 3 Domänenmodell (Bean, Pack)\n- 4 Regeln und Formeln R3\n- 5 Defaults, Grenzen, Reihenfolge, leere Daten, Fehler\n- UI und Design (Bohnen-Liste, Bohnendetail, Bohnen-/Packungsformular, Bohnenkarte)\n\nBuilds on: Kaffee-Begleiter S1: Design-System und App-Shell"
+      },
+      "timeout_min": 75,
+      "label": "regression",
+      "split": "train",
+      "base_branch": "base/story-cof-47-env",
+      "base_sha": "79cf9a3d5129402ce039c86342d10ea16aaf3612"
+    },
+    {
+      "id": "story-cof-48",
+      "stack": "flutter",
+      "kind": "story",
+      "size": "M",
+      "workflow_key": "epic-delivery",
+      "app": "coffee/flutter/claude",
+      "item": {
+        "issue_type": "Story",
+        "title": "Kaffee-Begleiter S4: Espresso-Brühung, Geschmack und Empfehlung",
+        "description": "Espresso-Brühungen erfassen, Geschmack bewerten und genau eine Verbesserungsempfehlung erhalten.\n\nAcceptance criteria:\n- 1. UC3: Espresso 18 g → 36 g in 27 s speichern → Liste zeigt „27 s\"; Liste nach startedAt absteigend mit Methode, Bohne, Zeit, Bewertung.\n- 2. Grenzen: Dosis 5–40 g, Ausbeute 1–4 × Dosis, Shot-Timer 1–120 s, Bewertung 1–5; ohne Mühle Hinweis „Zuerst eine Mühle anlegen\", Espresso ohne Maschine „Zuerst eine Maschine anlegen\".\n- 3. R7/Bestandsabzug: Dosis 17 g + Totraum 2.5 g → Abzug 19.5 g; Spülhinweis-Banner bei Bohnenwechsel oder ≥ 24 h Mühle ungenutzt; zu wenig Bohnen → „Nicht genug Bohnen in der Packung (Rest {n} g)\", remainingG nie negativ.\n- 4. Shot-Timer Start/Stopp und manuell änderbar.\n- 5. UC4/R9: sauer, 27 s, Mahlgrad 12.0 (Skala 1–30, Schritt 0.5, feiner abwärts) → „Mahlgrad auf 11.5\"; bitter 17 s → 11.0; weak 40 s → 13.0; sauer 38 s → 13.0; ausgewogen 22 s → 11.5; ausgewogen 27 s → keine Änderung; Einstellung 1.0 feiner → 1.0 mit „Skalenende\".\n- 6. Prüfreihenfolge: Wasser ausserhalb SCA zuerst, dann Packung vor Ruhezeit „noch ruhen lassen\", dann Mahlgrad; kein Wasserprofil → „Wasserwerte erfassen\".\n- 7. Jede Empfehlung zeigt Grund und Quelle (URL); Berechnung < 50 ms.\n- 8. Brühungsdetail mit Karte „Empfehlung\" und „Nächster Versuch\" (übernimmt Werte); Liste mit 1000 Brühungen baut Frames ≤ 16 ms.\n- 9. R8-Grundlage: Shots je Maschine gezählt.\n- 10. README.md und CHANGELOG.md aktualisiert.\n\nSpecification sections:\n- 3 Domänenmodell (Brew)\n- 4 Regeln und Formeln R7, R9\n- 5 Defaults, Grenzen, Reihenfolge, leere Daten, Fehler\n- UI und Design (Brühungs-Liste, Brühungsformular, Brühungsdetail)\n\nBuilds on: Kaffee-Begleiter S2: Ausrüstung und Wasserprofile, Kaffee-Begleiter S3: Bohnen, Packungen und Ruhezeit"
+      },
+      "timeout_min": 75,
+      "label": "regression",
+      "split": "train",
+      "base_branch": "base/story-cof-48-env",
+      "base_sha": "bc332f3ad95a8797a1c781410f560120ab538314"
+    },
+    {
+      "id": "story-cof-49",
+      "stack": "flutter",
+      "kind": "story",
+      "size": "M",
+      "workflow_key": "epic-delivery",
+      "app": "coffee/flutter/claude",
+      "item": {
+        "issue_type": "Story",
+        "title": "Kaffee-Begleiter S5: Filterkaffee geführt brühen",
+        "description": "Filterkaffee mit Methode, Verhältnis, Bloom, Aufgüssen und Timer im Fokus-Modus brühen und bewerten.\n\nAcceptance criteria:\n- 1. R10: 20 g, 1:16 → W = 320, Bloom 40 g, Summen 120 g (0:45), 220 g (1:15), 320 g (2:00); 15 g, 1:15 → 225, 30, 84, 155, 225.\n- 2. Verhältnis-Slider 1:14–1:18 in 0.5-Schritten, Standard 1:16, Anzeige „Wasser gesamt: 320 g\"; Methoden V60, Chemex, Kalita, AeroPress, Batch wählbar (V60-Schema, Quelle none).\n- 3. UC5: Fokus-Modus zeigt „Giesse bis 40 g\", dann „120 g\", „220 g\", „320 g\"; Timer ≥ 72 sp, Zwischensumme ≥ 48 sp, genau eine primäre Schaltfläche, keine Navigation.\n- 4. Schrittende: Android/iOS Haptik und Ton; Chrome nur visuell (300 ms primary Alpha 20 %).\n- 5. Am Ende Abfluss-Zeit (1–600 s) und Geschmack erfassen; Brühung wird gespeichert.\n- 6. R11: Mühle 1–30, Schritt 0.5, feiner abwärts, 20.0: Abfluss 255 s bitter → 20.5; 150 s → 19.5; 140 s → 19.0; 200 s sauer → 19.5; Wasser zuerst, dann Ruhezeit; Verhältnis nie empfohlen.\n- 7. Packungsvorschlag für Filter nur ruhezeit-fertige Packungen; Espresso-Blends nur nachrangig.\n- 8. Bestandsabzug und Brühungsliste wie bei Espresso.\n- 9. README.md und CHANGELOG.md aktualisiert.\n\nSpecification sections:\n- 4 Regeln und Formeln R10, R11, R3 (Filter-Vorschlag)\n- 3 Domänenmodell (Brew Filterfelder)\n- UI und Design (Filter geführt, LF5)\n\nBuilds on: Kaffee-Begleiter S4: Espresso-Brühung, Geschmack und Empfehlung"
+      },
+      "timeout_min": 75,
+      "label": "regression",
+      "split": "test",
+      "base_branch": "base/story-cof-49-env",
+      "base_sha": "70c5f3786c2169884d8350093021de79e270f3e7"
+    },
+    {
+      "id": "story-cof-50",
+      "stack": "flutter",
+      "kind": "story",
+      "size": "M",
+      "workflow_key": "epic-delivery",
+      "app": "coffee/flutter/claude",
+      "item": {
+        "issue_type": "Story",
+        "title": "Kaffee-Begleiter S6: Bestand, Pflege, Heute und Export/Import",
+        "description": "Bestandswarnungen, Pflegeintervalle, die Heute-Übersicht und JSON-Export/-Import bereitstellen.\n\nAcceptance criteria:\n- 1. R4/R5: 504 g in 28 Tagen → 18 g/Tag; orderPoint = 18 × (3 + 10) + 36 = 270 g; Bestand 250 g → „Jetzt bestellen\", 300 g → kein Hinweis; ohne Verbrauch orderPoint 100 g.\n- 2. R6/UC8: 90 g, 18 g/Tag, nächste Packung bereit 2026-11-25 → Banner „Kein trinkbereiter Kaffee vom 21.11.2026 bis 24.11.2026\" mit „Packung X öffnen\"; Beispiele 2 und 3 mit „Jetzt bestellen\"; Verbrauch 0 → keine Warnung.\n- 3. Bestands-Balken mit Markierung bei 50 %, Füllfarbe success/warning, leer mit error-Rand.\n- 4. UC7/R8: Backflush 7 Tage her → „Fällig\", nach „Erledigt\" „In 7 Tagen\"; 200 Shots; Entkalken > 150 ppm 30 Tage, 100–150 60, < 100 90; Mühle 28 Tage; Maschinenring: > 2 Tage success, 1–2 warning, ≤ 0 error.\n- 5. Pflege-Screen mit Leerzustand „Nichts zu pflegen\".\n- 6. Heute: Warnbanner, „Jetzt trinkbereit\"-Karten, letzte Brühung, FAB „Neue Brühung\", Leerzustand „Noch nichts da\".\n- 7. UC9: Export `coffee-export-YYYY-MM-DD.json` (schemaVersion 1), Daten löschen, Import → „Bohne 1\" wieder in der Liste; Share-Sheet auf Android/iOS, Download in Chrome.\n- 8. Import: neuere updatedAt gewinnt, fehlende Referenzen übersprungen „{n} Datensätze übersprungen\", unbekannte schemaVersion → „Dateiversion nicht unterstützt\" ohne Änderung, Transaktion.\n- 9. Quellen-Liste in Einstellungen; Playwright-Szenarien UC1–UC9 laufen grün.\n- 10. README.md und CHANGELOG.md aktualisiert.\n\nSpecification sections:\n- 4 Regeln und Formeln R4, R5, R6, R8\n- 6 Schnittstellen und Formate (JSON-Export, Import)\n- UI und Design (Heute, Pflege, Einstellungen, Bestands-Balken)\n- 7 Nicht-funktionale Anforderungen (Tests, Datenschutz)\n\nBuilds on: Kaffee-Begleiter S4: Espresso-Brühung, Geschmack und Empfehlung, Kaffee-Begleiter S5: Filterkaffee geführt brühen"
+      },
+      "timeout_min": 75,
+      "label": "regression",
+      "split": "train",
+      "base_branch": "base/story-cof-50-env",
+      "base_sha": "471fe46a2355b21fce422d194938817a946398a9"
+    },
+    {
+      "id": "story-cof-81",
+      "stack": "flutter",
+      "kind": "story",
+      "size": "M",
+      "workflow_key": "epic-delivery",
+      "app": "coffee/flutter/codex",
+      "item": {
+        "issue_type": "task",
+        "title": "Kaffee-Begleiter S1: App navigieren und lokale Daten sichern",
+        "description": "Der Nutzer erreicht alle App-Ziele und kann lokale Daten sicher exportieren und wiederherstellen.\n\nAcceptance criteria:\n- 1. Flutter-App unter coffee/flutter/codex startet auf Android-Emulator und Chrome, Android/iOS-Ziele vorhanden. Jede Route einschliesslich Edit-Routen aus screens.md ist erreichbar; spätere Screens zeigen lokalisiertes Coming soon. Bei390 dp fünf Bottom-Ziele, Tablet fünf Rail-Ziele, ab1024 dp sieben Sidebar-Ziele mit240 dp Breite; Mehr/Einstellungen ohne Datensätze bedienbar.\n- 2. Eine Tokens-Datei und gemeinsame Basiskomponenten für Buttons, Karten, Felder, Chips, Banner, Timer, Empty-State und sämtliche gezeichneten Visuals aus UI und Design. Lebende Styleguide-Seite zeigt jede Komponente in allen anwendbaren default/hover/pressed/focus/selected/disabled/loading/error/empty-Zuständen, nicht anwendbare Zustände benannt. Light/Dark, lokale Fraunces/Inter/JetBrains-Mono-Fonts; Textkontrast≥4.5:1, Grafik/Fokus≥3:1, Fokus2 dp/Abstand2 dp, Touch≥48 dp.\n- 3. Systemsprache DE/EN, sonst EN; identische ICU-Schlüssel. DE16.11.2026 und15.5, EN16 Nov2026. Härteeinheit standardfH bleibt nach Neustart erhalten. Quellen nur nach Tippen extern öffnen; automatische Netzwerkabrufe0.\n- 4. Drift/SQLite nativ, drift-Wasm/OPFS in Chrome, sämtliche kanonischen Entitäten einschliesslich consumptionEvents, UUIDs, UTC-ms-Zeitstempel, Tombstones und Transaktionen. Export schemaVersion1 enthält exakt alle Pflichtfelder aus §5, einschliesslich settings.hardnessUnit und leerer Arrays. Dateiname coffee-export-YYYY-MM-DD.json; Android/iOS Share-Sheet, Chrome Download, Import File Picker≤10 MiB.\n- 5. Vollständiges Export-Fixture in frische DB importieren→Bohne1 und referenzierte Datensätze identisch. Neuer updatedAt ersetzt, gleich/älter überspringt; lokaler Tombstone13:00 gegen Export12:00 bleibt archiviert. Referenzen unabhängig von Array-Reihenfolge gegen Endbestand auflösen, verwaiste samt Abhängigkeiten überspringen; Ergebnis createdCount/replacedCount/skippedCount korrekt.\n- 6. Fehlende/zusätzliche Top-Level-Felder, fehlende consumptionEvents/settings, settings=null, falsche Typen/UUID/Zeitstempel/Feldgrenzen, doppelte ID, unbekannte Einheit oder Übergrösse→Ungültige Importdatei/Invalid import file und unveränderte DB. Unbekannte Version→Dateiversion nicht unterstützt/File version not supported. Gültiger Leerexport ersetzt hardnessUnit atomar.\n- 7. environment.json verwendet Flutter-App-Gates für Format, striktes Analyze/flutter_lints, Unit/Widget/Chrome und Zeilenprüfung. Quellen≤300, Tests≤500, Funktionen≤60, Zeilen≤160; generierte Ausnahmen wie spezifiziert. check_lines:301 lib-Zeilen→Exit1 und Pfad/Anzahl, zulässig→Exit0. Team-Struktur, eine Klasse/Widget je Datei, öffentliche API dokumentiert.\n- 8. README.md/CHANGELOG.md aktualisiert; alle betroffenen Screens entsprechen screens.md inklusive DE/EN-Texten, Fehler-/Leer-/Ladezuständen, Rücknavigation und Verwerfen-Dialog; Screenshots390/1280 dp light/dark erfüllen anwendbare LF1–LF12. Offline-Neustart Android/Chrome und alle relevanten Tests ohne Skip grün. Alle späteren Stories übernehmen diese Gates und erweitern ausschliesslich die eine Tokens-Datei, gemeinsame Komponenten und Styleguide; keine Story-Stylesheets oder Farb-/Grössenliterale ausserhalb Tokens.\n\nSpecification sections:\n- §1 Ziel und Scope\n- §3 Domänenmodell: gemeinsame Felder und Persistenz\n- §5 Defaults, Grenzen, Reihenfolge, leere Daten, Fehler: kanonisches Schema\n- §6 Schnittstellen und Formate\n- §7 Nicht-funktionale Anforderungen\n- §8 Entscheidungen\n- UI und Design: Tokens, Komponenten, App-Shell und Navigation\n- Vollständiger Bildschirmvertrag: alle Routen, more/settings\n- Verbindliche Ergänzungen: Persistenz, Import, Schrift, Komponentenzustände\n- Akzeptanzkriterien AC11–AC16, AC24, AC26"
+      },
+      "timeout_min": 75,
+      "label": "training",
+      "split": "train",
+      "base_branch": "base/story-cof-81-env",
+      "base_sha": "4dd6d9c0647846fd43e8914ad10bcb62073c4ec2"
+    }
+  ]
+}

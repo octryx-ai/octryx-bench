@@ -1,0 +1,11 @@
+{"version":1,"rules":[
+  {"key":"backflush.shots","value":200,"source":"https://www.thehomebaristasquill.com/p/how-to-backflush-and-descale-your","retrieved":"2026-11-16"},
+  {"key":"backflush.days","value":7,"source":"https://www.thehomebaristasquill.com/p/how-to-backflush-and-descale-your","retrieved":"2026-11-16"},
+  {"key":"descale.hard.minPpm","value":150,"source":"https://www.thehomebaristasquill.com/p/how-to-backflush-and-descale-your","retrieved":"2026-11-16"},
+  {"key":"descale.hard.days","value":30,"source":"https://www.thehomebaristasquill.com/p/how-to-backflush-and-descale-your","retrieved":"2026-11-16"},
+  {"key":"descale.medium.minPpm","value":100,"source":"https://www.thehomebaristasquill.com/p/how-to-backflush-and-descale-your","retrieved":"2026-11-16"},
+  {"key":"descale.medium.days","value":60,"source":"https://www.thehomebaristasquill.com/p/how-to-backflush-and-descale-your","retrieved":"2026-11-16"},
+  {"key":"descale.soft.days","value":90,"source":"https://www.thehomebaristasquill.com/p/how-to-backflush-and-descale-your","retrieved":"2026-11-16"},
+  {"key":"grinderClean.days","value":28,"source":"none","retrieved":"2026-11-16"},
+  {"key":"grinder.idleHours","value":24,"source":"none","retrieved":"2026-11-16"}
+]}
