@@ -1,0 +1,11 @@
+{"version":1,"rules":[
+  {"key":"rest.filter.light","value":7,"source":"https://www.percolateapp.com/articles/how-long-to-rest-coffee-after-roasting","retrieved":"2026-11-16"},
+  {"key":"rest.filter.medium","value":5,"source":"https://www.percolateapp.com/articles/how-long-to-rest-coffee-after-roasting","retrieved":"2026-11-16"},
+  {"key":"rest.filter.mediumDark","value":4,"source":"https://www.percolateapp.com/articles/how-long-to-rest-coffee-after-roasting","retrieved":"2026-11-16"},
+  {"key":"rest.filter.dark","value":3,"source":"https://www.percolateapp.com/articles/how-long-to-rest-coffee-after-roasting","retrieved":"2026-11-16"},
+  {"key":"rest.espresso.light","value":14,"source":"https://www.percolateapp.com/articles/how-long-to-rest-coffee-after-roasting","retrieved":"2026-11-16"},
+  {"key":"rest.espresso.medium","value":10,"source":"https://www.percolateapp.com/articles/how-long-to-rest-coffee-after-roasting","retrieved":"2026-11-16"},
+  {"key":"rest.espresso.mediumDark","value":7,"source":"https://www.percolateapp.com/articles/how-long-to-rest-coffee-after-roasting","retrieved":"2026-11-16"},
+  {"key":"rest.espresso.dark","value":5,"source":"https://www.percolateapp.com/articles/how-long-to-rest-coffee-after-roasting","retrieved":"2026-11-16"},
+  {"key":"stale.days","value":45,"source":"https://www.percolateapp.com/articles/how-long-to-rest-coffee-after-roasting","retrieved":"2026-11-16"}
+]}
